@@ -1,0 +1,188 @@
+# Entity: assistant_settings_runtime_update_success
+
+main: kit: entity: assistant_settings_runtime_update_success: {
+
+  alias: field: {}
+
+  fields: {
+    asrInitialDelayMs: {
+      h: "Asr Initial Delay Ms"
+      n: "asrInitialDelayMs"
+      r: false
+      sh: "Value supplied for `asrInitialDelayMs` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    asrSilenceMs: {
+      h: "Asr Silence Ms"
+      n: "asrSilenceMs"
+      r: false
+      sh: "Value supplied for `asrSilenceMs` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    callPermissions: {
+      h: "Call Permissions"
+      n: "callPermissions"
+      r: false
+      sh: "Value supplied for `callPermissions` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$OBJECT`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    dynamicTimeoutMs: {
+      h: "Dynamic Timeout Ms"
+      n: "dynamicTimeoutMs"
+      r: false
+      sh: "Value supplied for `dynamicTimeoutMs` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    filler: {
+      h: "Filler"
+      n: "filler"
+      r: false
+      sh: "Value supplied for `filler` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$OBJECT`"
+    }
+    maxResponseLength: {
+      h: "Max Response Length"
+      n: "maxResponseLength"
+      r: false
+      sh: "Value supplied for `maxResponseLength` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    reprompt: {
+      h: "Reprompt"
+      n: "reprompt"
+      r: false
+      sh: "Value supplied for `reprompt` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$OBJECT`"
+    }
+    service: {
+      h: "Service"
+      n: "service"
+      r: true
+      t: "`$STRING`"
+    }
+    truncateInitialAudio: {
+      h: "Truncate Initial Audio"
+      n: "truncateInitialAudio"
+      r: false
+      sh: "Value supplied for `truncateInitialAudio` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    ttsInterruptionInConversation: {
+      h: "Tts Interruption In Conversation"
+      n: "ttsInterruptionInConversation"
+      r: false
+      sh: "Value supplied for `ttsInterruptionInConversation` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    vad: {
+      h: "Vad"
+      n: "vad"
+      r: false
+      sh: "Value supplied for `vad` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    vadMinVoiceMs: {
+      h: "Vad Min Voice Ms"
+      n: "vadMinVoiceMs"
+      r: false
+      sh: "Value supplied for `vadMinVoiceMs` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    vadThreshold: {
+      fo: "float"
+      h: "Vad Threshold"
+      n: "vadThreshold"
+      r: false
+      sh: "Value supplied for `vadThreshold` in the `AssistantSettingsRuntimeUpdateRequest` request."
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "assistant_settings_runtime_update_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/settings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/settings"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "settings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

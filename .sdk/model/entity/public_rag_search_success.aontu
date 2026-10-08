@@ -1,0 +1,76 @@
+# Entity: public_rag_search_success
+
+main: kit: entity: public_rag_search_success: {
+
+  alias: field: {}
+
+  fields: {
+    count: {
+      h: "Count"
+      n: "count"
+      r: true
+      sh: "Number of chunks returned by the search, up to the service limit of 4."
+      t: "`$INTEGER`"
+    }
+    query: {
+      h: "Query"
+      n: "query"
+      r: true
+      sh: "Normalized query text used for the search."
+      t: "`$STRING`"
+    }
+    rag_id: {
+      h: "Rag Id"
+      n: "rag_id"
+      r: true
+      sh: "Public RAG identifier supplied in the request and returned unchanged on success."
+      t: "`$STRING`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: true
+      sh: "Chunks returned by the vector search."
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "public_rag_search_success"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /public/v1/rag/search"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/public/v1/rag/search"
+          s: [
+            {
+              lit: "public"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

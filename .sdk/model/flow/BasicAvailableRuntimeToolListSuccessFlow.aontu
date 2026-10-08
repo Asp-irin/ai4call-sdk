@@ -1,0 +1,28 @@
+# BasicAvailableRuntimeToolListSuccessFlow
+
+main: kit: flow: BasicAvailableRuntimeToolListSuccessFlow:
+{
+  entity: "available_runtime_tool_list_success",
+  kind: "basic",
+  name: "BasicAvailableRuntimeToolListSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "available_runtime_tool_list_success_ref01",
+        srcdatavar: "available_runtime_tool_list_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-available_runtime_tool_list_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAvailableRuntimeToolListSuccessFlow"
+}

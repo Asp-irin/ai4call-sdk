@@ -1,0 +1,85 @@
+# Entity: pre_call
+
+main: kit: entity: pre_call: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "pre_call"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/catalog/assistants/{assistantId}/pre-call"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/catalog/assistants/{assistantId}/pre-call"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "pre-call"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

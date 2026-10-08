@@ -1,0 +1,88 @@
+# Entity: account_plugin_purchase_success
+
+main: kit: entity: account_plugin_purchase_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "Result of a plugin purchase, including charged prices and created instance data."
+      t: "`$OBJECT`"
+    }
+    instanceName: {
+      h: "Instance Name"
+      n: "instanceName"
+      r: false
+      sh: "Value supplied for `instanceName` in the `AccountPluginPurchaseRequest` request."
+      t: "`$STRING`"
+    }
+    instance_name: {
+      de: true
+      h: "Instance Name"
+      n: "instance_name"
+      r: false
+      sh: "Legacy alias of `instanceName`."
+      t: "`$STRING`"
+    }
+    pluginName: {
+      h: "Plugin Name"
+      n: "pluginName"
+      r: false
+      sh: "Value supplied for `pluginName` in the `AccountPluginPurchaseRequest` request."
+      t: "`$STRING`"
+    }
+    plugin_name: {
+      de: true
+      h: "Plugin Name"
+      n: "plugin_name"
+      r: false
+      sh: "Legacy alias of `pluginName`."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "account_plugin_purchase_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/account/plugins/purchase"
+            source: "openapi3"
+            version: 2
+          }
+          m: "PATCH"
+          o: "/api/v1/account/plugins/purchase"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "purchase"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

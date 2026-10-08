@@ -1,0 +1,32 @@
+# BasicRuntimeBindingFlow
+
+main: kit: flow: BasicRuntimeBindingFlow:
+{
+  entity: "runtime_binding",
+  kind: "basic",
+  name: "BasicRuntimeBindingFlow",
+  step: [
+    {
+      i: {
+        ref: "runtime_binding_ref01",
+        srcdatavar: "runtime_binding_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "runtime_binding01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-runtime_binding_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRuntimeBindingFlow"
+}

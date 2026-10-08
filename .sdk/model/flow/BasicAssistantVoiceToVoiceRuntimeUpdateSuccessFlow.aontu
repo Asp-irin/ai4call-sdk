@@ -1,0 +1,29 @@
+# BasicAssistantVoiceToVoiceRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantVoiceToVoiceRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_voice_to_voice_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantVoiceToVoiceRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_voice_to_voice_runtime_update_success_ref01",
+        srcdatavar: "assistant_voice_to_voice_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "apiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_voice_to_voice_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantVoiceToVoiceRuntimeUpdateSuccessFlow"
+}

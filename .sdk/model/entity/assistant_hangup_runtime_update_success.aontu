@@ -1,0 +1,138 @@
+# Entity: assistant_hangup_runtime_update_success
+
+main: kit: entity: assistant_hangup_runtime_update_success: {
+
+  alias: field: {}
+
+  fields: {
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    availableAgents: {
+      h: "Available Agents"
+      n: "availableAgents"
+      r: false
+      sh: "Value supplied for `availableAgents` in the `AssistantHangupRuntimeUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    enableHangup: {
+      h: "Enable Hangup"
+      n: "enableHangup"
+      r: false
+      sh: "Value supplied for `enableHangup` in the `AssistantHangupRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    enableRedirect: {
+      h: "Enable Redirect"
+      n: "enableRedirect"
+      r: false
+      sh: "Value supplied for `enableRedirect` in the `AssistantHangupRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    enableTransferAgent: {
+      h: "Enable Transfer Agent"
+      n: "enableTransferAgent"
+      r: false
+      sh: "Value supplied for `enableTransferAgent` in the `AssistantHangupRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    service: {
+      h: "Service"
+      n: "service"
+      r: true
+      t: "`$STRING`"
+    }
+    transferAgentNotificationText: {
+      h: "Transfer Agent Notification Text"
+      n: "transferAgentNotificationText"
+      r: false
+      sh: "Value supplied for `transferAgentNotificationText` in the `AssistantHangupRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_hangup_runtime_update_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/hangup"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/hangup"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "hangup"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

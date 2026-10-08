@@ -1,0 +1,72 @@
+# BasicProviderWalletFlow
+
+main: kit: flow: BasicProviderWalletFlow:
+{
+  entity: "provider_wallet",
+  kind: "basic",
+  name: "BasicProviderWalletFlow",
+  step: [
+    {
+      i: {
+        ref: "provider_wallet_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "provider_wallet_ref01",
+        srcdatavar: "provider_wallet_ref01_data",
+        suffix: "_up0",
+        textfield: "engine"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-provider_wallet_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "provider_wallet_ref01",
+        srcdatavar: "provider_wallet_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "provider_wallet01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-provider_wallet_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "provider_wallet_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "provider_wallet01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicProviderWalletFlow"
+}

@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "rag_collection_document_upload_success": {
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "collection_id": "COLLECTION01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS00"
+      },
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "collection_id": "COLLECTION01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS01"
+      },
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "collection_id": "COLLECTION01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "rag_collection_document_upload_success": {
+      "rag_collection_document_upload_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/catalog/rag/collections/{ragId}/documents": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /api/v1/rag/collections/{ragId}/documents": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

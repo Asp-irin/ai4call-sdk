@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "pre_call": {
+      "PRE_CALL00": {
+        "configuration": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "PRE_CALL00"
+      },
+      "PRE_CALL01": {
+        "configuration": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "PRE_CALL01"
+      },
+      "PRE_CALL02": {
+        "configuration": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "PRE_CALL02"
+      }
+    }
+  },
+  "new": {
+    "pre_call": {
+      "pre_call_ref01": {
+        "configuration": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/pre-call": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

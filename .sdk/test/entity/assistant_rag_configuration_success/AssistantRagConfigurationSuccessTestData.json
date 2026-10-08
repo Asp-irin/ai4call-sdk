@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "assistant_rag_configuration_success": {
+      "ASSISTANT_RAG_CONFIGURATION_SUCCESS00": {
+        "enabled": true,
+        "kbPrompt": "s29",
+        "name": "s2a",
+        "returnedChunks": 43,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_RAG_CONFIGURATION_SUCCESS00"
+      },
+      "ASSISTANT_RAG_CONFIGURATION_SUCCESS01": {
+        "enabled": true,
+        "kbPrompt": "s51",
+        "name": "s52",
+        "returnedChunks": 83,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_RAG_CONFIGURATION_SUCCESS01"
+      },
+      "ASSISTANT_RAG_CONFIGURATION_SUCCESS02": {
+        "enabled": true,
+        "kbPrompt": "s79",
+        "name": "s7a",
+        "returnedChunks": 123,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_RAG_CONFIGURATION_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_rag_configuration_success": {
+      "assistant_rag_configuration_success_ref01": {
+        "enabled": true,
+        "kbPrompt": "sa1",
+        "name": "sa2",
+        "returnedChunks": 163
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/assistants/{assistantId}/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

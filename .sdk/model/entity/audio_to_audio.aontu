@@ -1,0 +1,82 @@
+# Entity: audio_to_audio
+
+main: kit: entity: audio_to_audio: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$OBJECT`"
+    }
+    message: {
+      h: "Message"
+      n: "message"
+      r: true
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      sh: "Collection metadata."
+      t: "`$OBJECT`"
+    }
+    requestId: {
+      h: "Request Id"
+      n: "requestId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "audio_to_audio"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/catalog/providers/audio-to-audio"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/catalog/providers/audio-to-audio"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              lit: "audio-to-audio"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

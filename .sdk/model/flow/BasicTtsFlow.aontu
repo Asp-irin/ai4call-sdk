@@ -1,0 +1,28 @@
+# BasicTtsFlow
+
+main: kit: flow: BasicTtsFlow:
+{
+  entity: "tts",
+  kind: "basic",
+  name: "BasicTtsFlow",
+  step: [
+    {
+      i: {
+        ref: "tts_ref01",
+        srcdatavar: "tts_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tts_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTtsFlow"
+}

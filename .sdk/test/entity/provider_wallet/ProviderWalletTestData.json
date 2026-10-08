@@ -1,0 +1,96 @@
+{
+  "existing": {
+    "provider_wallet": {
+      "PROVIDER_WALLET00": {
+        "config": {},
+        "credential": {},
+        "data": {},
+        "engine": "s85",
+        "id": "PROVIDER_WALLET00",
+        "isActive": false,
+        "message": "s88",
+        "meta": {},
+        "name": "s8a",
+        "provider": "s8b",
+        "requestId": "s8c",
+        "serviceType": "s8d",
+        "success": true
+      },
+      "PROVIDER_WALLET01": {
+        "config": {},
+        "credential": {},
+        "data": {},
+        "engine": "s107",
+        "id": "PROVIDER_WALLET01",
+        "isActive": false,
+        "message": "s10a",
+        "meta": {},
+        "name": "s10c",
+        "provider": "s10d",
+        "requestId": "s10e",
+        "serviceType": "s10f",
+        "success": true
+      },
+      "PROVIDER_WALLET02": {
+        "config": {},
+        "credential": {},
+        "data": {},
+        "engine": "s189",
+        "id": "PROVIDER_WALLET02",
+        "isActive": false,
+        "message": "s18c",
+        "meta": {},
+        "name": "s18e",
+        "provider": "s18f",
+        "requestId": "s190",
+        "serviceType": "s191",
+        "success": true
+      }
+    }
+  },
+  "new": {
+    "provider_wallet": {
+      "provider_wallet_ref01": {
+        "config": {},
+        "credential": {},
+        "data": {},
+        "engine": "s20b",
+        "isActive": false,
+        "message": "s20e",
+        "meta": {},
+        "name": "s210",
+        "provider": "s211",
+        "requestId": "s212",
+        "serviceType": "s213",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/account/provider-wallet": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/account/provider-wallet": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/account/provider-wallet/{providerWalletId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/account/provider-wallet/{providerWalletId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/provider-wallet/{providerWalletId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

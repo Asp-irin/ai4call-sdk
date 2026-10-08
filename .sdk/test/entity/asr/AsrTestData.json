@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "asr": {
+      "ASR00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "ASR00"
+      },
+      "ASR01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "ASR01"
+      },
+      "ASR02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "ASR02"
+      }
+    }
+  },
+  "new": {
+    "asr": {
+      "asr_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/providers/asr": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

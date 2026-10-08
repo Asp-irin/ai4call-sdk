@@ -1,0 +1,72 @@
+# BasicKnowledgeFlow
+
+main: kit: flow: BasicKnowledgeFlow:
+{
+  entity: "knowledge",
+  kind: "basic",
+  name: "BasicKnowledgeFlow",
+  step: [
+    {
+      i: {
+        ref: "knowledge_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "knowledge_ref01",
+        srcdatavar: "knowledge_ref01_data",
+        suffix: "_up0",
+        textfield: "defaultPostAction"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-knowledge_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "knowledge_ref01",
+        srcdatavar: "knowledge_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "knowledge01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-knowledge_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "knowledge_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "knowledge01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicKnowledgeFlow"
+}

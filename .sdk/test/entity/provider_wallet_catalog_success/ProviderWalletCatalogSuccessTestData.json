@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "provider_wallet_catalog_success": {
+      "PROVIDER_WALLET_CATALOG_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "PROVIDER_WALLET_CATALOG_SUCCESS00"
+      },
+      "PROVIDER_WALLET_CATALOG_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "PROVIDER_WALLET_CATALOG_SUCCESS01"
+      },
+      "PROVIDER_WALLET_CATALOG_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "PROVIDER_WALLET_CATALOG_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "provider_wallet_catalog_success": {
+      "provider_wallet_catalog_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/provider-wallet/catalog": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

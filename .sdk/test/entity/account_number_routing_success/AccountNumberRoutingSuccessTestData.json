@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "account_number_routing_success": {
+      "ACCOUNT_NUMBER_ROUTING_SUCCESS00": {
+        "data": {},
+        "demoNumbers": [],
+        "message": "s52",
+        "meta": {},
+        "purchasedNumbers": [],
+        "requestId": "s55",
+        "success": true,
+        "userNumbers": [],
+        "id": "ACCOUNT_NUMBER_ROUTING_SUCCESS00"
+      },
+      "ACCOUNT_NUMBER_ROUTING_SUCCESS01": {
+        "data": {},
+        "demoNumbers": [],
+        "message": "sa2",
+        "meta": {},
+        "purchasedNumbers": [],
+        "requestId": "sa5",
+        "success": true,
+        "userNumbers": [],
+        "id": "ACCOUNT_NUMBER_ROUTING_SUCCESS01"
+      },
+      "ACCOUNT_NUMBER_ROUTING_SUCCESS02": {
+        "data": {},
+        "demoNumbers": [],
+        "message": "sf2",
+        "meta": {},
+        "purchasedNumbers": [],
+        "requestId": "sf5",
+        "success": true,
+        "userNumbers": [],
+        "id": "ACCOUNT_NUMBER_ROUTING_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_number_routing_success": {
+      "account_number_routing_success_ref01": {
+        "data": {},
+        "demoNumbers": [],
+        "message": "s142",
+        "meta": {},
+        "purchasedNumbers": [],
+        "requestId": "s145",
+        "success": true,
+        "userNumbers": []
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/number-routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/number-routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

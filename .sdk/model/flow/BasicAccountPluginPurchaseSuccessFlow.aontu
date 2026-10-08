@@ -1,0 +1,29 @@
+# BasicAccountPluginPurchaseSuccessFlow
+
+main: kit: flow: BasicAccountPluginPurchaseSuccessFlow:
+{
+  entity: "account_plugin_purchase_success",
+  kind: "basic",
+  name: "BasicAccountPluginPurchaseSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_plugin_purchase_success_ref01",
+        srcdatavar: "account_plugin_purchase_success_ref01_data",
+        suffix: "_up0",
+        textfield: "instanceName"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_plugin_purchase_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountPluginPurchaseSuccessFlow"
+}

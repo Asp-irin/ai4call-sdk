@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "account_allowed_ips_success": {
+      "ACCOUNT_ALLOWED_IPS_SUCCESS00": {
+        "addIps": [],
+        "allowedIps": [],
+        "data": {},
+        "deleteIps": [],
+        "message": "s54",
+        "meta": {},
+        "requestId": "s56",
+        "success": false,
+        "id": "ACCOUNT_ALLOWED_IPS_SUCCESS00"
+      },
+      "ACCOUNT_ALLOWED_IPS_SUCCESS01": {
+        "addIps": [],
+        "allowedIps": [],
+        "data": {},
+        "deleteIps": [],
+        "message": "sa4",
+        "meta": {},
+        "requestId": "sa6",
+        "success": false,
+        "id": "ACCOUNT_ALLOWED_IPS_SUCCESS01"
+      },
+      "ACCOUNT_ALLOWED_IPS_SUCCESS02": {
+        "addIps": [],
+        "allowedIps": [],
+        "data": {},
+        "deleteIps": [],
+        "message": "sf4",
+        "meta": {},
+        "requestId": "sf6",
+        "success": false,
+        "id": "ACCOUNT_ALLOWED_IPS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_allowed_ips_success": {
+      "account_allowed_ips_success_ref01": {
+        "addIps": [],
+        "allowedIps": [],
+        "data": {},
+        "deleteIps": [],
+        "message": "s144",
+        "meta": {},
+        "requestId": "s146",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/allowed-ips": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/allowed-ips": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

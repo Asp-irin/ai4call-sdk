@@ -1,0 +1,156 @@
+# Entity: rag_collection_document_delete_success
+
+main: kit: entity: rag_collection_document_delete_success: {
+
+  alias: field: {}
+
+  name: "rag_collection_document_delete_success"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /api/v1/catalog/rag/collections/{ragId}/documents/{fileName}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "collection_id"
+                or: "ragId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "file_name"
+                or: "fileName"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/api/v1/catalog/rag/collections/{ragId}/documents/{fileName}"
+          q: {
+            exist: [
+              "collection_id"
+              "file_name"
+            ]
+          }
+          r: {
+            param: {
+              fileName: "file_name"
+              ragId: "collection_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "collections"
+            }
+            {
+              var: "collection_id"
+            }
+            {
+              lit: "documents"
+            }
+            {
+              var: "file_name"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /api/v1/rag/collections/{ragId}/documents/{fileName}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "collection_id"
+                or: "ragId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "file_name"
+                or: "fileName"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/api/v1/rag/collections/{ragId}/documents/{fileName}"
+          q: {
+            exist: [
+              "collection_id"
+              "file_name"
+            ]
+          }
+          r: {
+            param: {
+              fileName: "file_name"
+              ragId: "collection_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "collections"
+            }
+            {
+              var: "collection_id"
+            }
+            {
+              lit: "documents"
+            }
+            {
+              var: "file_name"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

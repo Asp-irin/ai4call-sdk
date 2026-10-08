@@ -1,0 +1,29 @@
+# BasicAssistantSettingsRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantSettingsRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_settings_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantSettingsRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_settings_runtime_update_success_ref01",
+        srcdatavar: "assistant_settings_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "assistantApiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_settings_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantSettingsRuntimeUpdateSuccessFlow"
+}

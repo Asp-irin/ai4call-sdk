@@ -1,0 +1,18 @@
+# BasicRagCollectionDocumentTokenEstimateSuccessFlow
+
+main: kit: flow: BasicRagCollectionDocumentTokenEstimateSuccessFlow:
+{
+  entity: "rag_collection_document_token_estimate_success",
+  kind: "basic",
+  name: "BasicRagCollectionDocumentTokenEstimateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "rag_collection_document_token_estimate_success_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicRagCollectionDocumentTokenEstimateSuccessFlow"
+}

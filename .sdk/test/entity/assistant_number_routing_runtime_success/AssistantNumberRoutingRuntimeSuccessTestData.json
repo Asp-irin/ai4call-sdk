@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "assistant_number_routing_runtime_success": {
+      "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS00": {
+        "configuration": {},
+        "demoNumbers": [],
+        "purchasedNumbers": [],
+        "userNumbers": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS01": {
+        "configuration": {},
+        "demoNumbers": [],
+        "purchasedNumbers": [],
+        "userNumbers": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS02": {
+        "configuration": {},
+        "demoNumbers": [],
+        "purchasedNumbers": [],
+        "userNumbers": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_NUMBER_ROUTING_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_number_routing_runtime_success": {
+      "assistant_number_routing_runtime_success_ref01": {
+        "configuration": {},
+        "demoNumbers": [],
+        "purchasedNumbers": [],
+        "userNumbers": []
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/number-routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+# Entity: assistant_tools_runtime_update_success
+
+main: kit: entity: assistant_tools_runtime_update_success: {
+
+  alias: field: {}
+
+  fields: {
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "Resulting tool configuration after the update."
+      t: "`$OBJECT`"
+    }
+    service: {
+      h: "Service"
+      n: "service"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_tools_runtime_update_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/tools"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/tools"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "tools"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

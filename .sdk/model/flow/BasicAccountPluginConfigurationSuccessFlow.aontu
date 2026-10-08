@@ -1,0 +1,51 @@
+# BasicAccountPluginConfigurationSuccessFlow
+
+main: kit: flow: BasicAccountPluginConfigurationSuccessFlow:
+{
+  entity: "account_plugin_configuration_success",
+  kind: "basic",
+  name: "BasicAccountPluginConfigurationSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_plugin_configuration_success_ref01",
+        srcdatavar: "account_plugin_configuration_success_ref01_data",
+        suffix: "_up0",
+        textfield: "instanceName"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_plugin_configuration_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "account_plugin_configuration_success_ref01",
+        srcdatavar: "account_plugin_configuration_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "account_plugin_configuration_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_plugin_configuration_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountPluginConfigurationSuccessFlow"
+}

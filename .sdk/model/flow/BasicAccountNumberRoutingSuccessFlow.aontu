@@ -1,0 +1,47 @@
+# BasicAccountNumberRoutingSuccessFlow
+
+main: kit: flow: BasicAccountNumberRoutingSuccessFlow:
+{
+  entity: "account_number_routing_success",
+  kind: "basic",
+  name: "BasicAccountNumberRoutingSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_number_routing_success_ref01",
+        srcdatavar: "account_number_routing_success_ref01_data",
+        suffix: "_up0",
+        textfield: "message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_number_routing_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "account_number_routing_success_ref01",
+        srcdatavar: "account_number_routing_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_number_routing_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountNumberRoutingSuccessFlow"
+}

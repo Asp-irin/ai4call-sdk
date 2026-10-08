@@ -1,0 +1,22 @@
+# BasicRagCollectionDocumentUploadSuccessFlow
+
+main: kit: flow: BasicRagCollectionDocumentUploadSuccessFlow:
+{
+  entity: "rag_collection_document_upload_success",
+  kind: "basic",
+  name: "BasicRagCollectionDocumentUploadSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "rag_collection_document_upload_success_ref01"
+      }
+
+      m: {
+        collection_id: "collection01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicRagCollectionDocumentUploadSuccessFlow"
+}

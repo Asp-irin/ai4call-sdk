@@ -1,0 +1,152 @@
+# Entity: assistant_advanced_settings_runtime_update_success
+
+main: kit: entity: assistant_advanced_settings_runtime_update_success: {
+
+  alias: field: {}
+
+  fields: {
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    freqPenalty: {
+      h: "Freq Penalty"
+      n: "freqPenalty"
+      r: false
+      sh: "Value supplied for `freqPenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$NUMBER`"
+    }
+    maxTokens: {
+      h: "Max Tokens"
+      n: "maxTokens"
+      r: false
+      sh: "Value supplied for `maxTokens` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    presencePenalty: {
+      h: "Presence Penalty"
+      n: "presencePenalty"
+      r: false
+      sh: "Value supplied for `presencePenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$NUMBER`"
+    }
+    service: {
+      h: "Service"
+      n: "service"
+      r: true
+      t: "`$STRING`"
+    }
+    stopSequences: {
+      h: "Stop Sequences"
+      n: "stopSequences"
+      r: false
+      sh: "Value supplied for `stopSequences` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    temperature: {
+      h: "Temperature"
+      n: "temperature"
+      r: false
+      sh: "Value supplied for `temperature` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$NUMBER`"
+    }
+    topK: {
+      h: "Top K"
+      n: "topK"
+      r: false
+      sh: "Value supplied for `topK` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    topP: {
+      h: "Top P"
+      n: "topP"
+      r: false
+      sh: "Value supplied for `topP` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request."
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "assistant_advanced_settings_runtime_update_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/advanced-settings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/advanced-settings"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "advanced-settings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "runtime_binding": {
+      "RUNTIME_BINDING00": {
+        "assistantApiKey": "s1e",
+        "assistantId": "s1f",
+        "runtimeBindings": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "RUNTIME_BINDING00"
+      },
+      "RUNTIME_BINDING01": {
+        "assistantApiKey": "s3c",
+        "assistantId": "s3d",
+        "runtimeBindings": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "RUNTIME_BINDING01"
+      },
+      "RUNTIME_BINDING02": {
+        "assistantApiKey": "s5a",
+        "assistantId": "s5b",
+        "runtimeBindings": {},
+        "assistant_id": "ASSISTANT01",
+        "id": "RUNTIME_BINDING02"
+      }
+    }
+  },
+  "new": {
+    "runtime_binding": {
+      "runtime_binding_ref01": {
+        "assistantApiKey": "s78",
+        "assistantId": "s79",
+        "runtimeBindings": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/runtime-bindings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "assistant_advanced_settings_runtime_update_success": {
+      "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS00": {
+        "assistantApiKey": "s6e",
+        "assistantId": "s6f",
+        "configuration": {},
+        "freqPenalty": 113,
+        "maxTokens": 114,
+        "presencePenalty": 115,
+        "service": "s74",
+        "stopSequences": [],
+        "temperature": 118,
+        "topK": 119,
+        "topP": 120,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS01": {
+        "assistantApiKey": "sdc",
+        "assistantId": "sdd",
+        "configuration": {},
+        "freqPenalty": 223,
+        "maxTokens": 224,
+        "presencePenalty": 225,
+        "service": "se2",
+        "stopSequences": [],
+        "temperature": 228,
+        "topK": 229,
+        "topP": 230,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS02": {
+        "assistantApiKey": "s14a",
+        "assistantId": "s14b",
+        "configuration": {},
+        "freqPenalty": 333,
+        "maxTokens": 334,
+        "presencePenalty": 335,
+        "service": "s150",
+        "stopSequences": [],
+        "temperature": 338,
+        "topK": 339,
+        "topP": 340,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_advanced_settings_runtime_update_success": {
+      "assistant_advanced_settings_runtime_update_success_ref01": {
+        "assistantApiKey": "s1b8",
+        "assistantId": "s1b9",
+        "configuration": {},
+        "freqPenalty": 443,
+        "maxTokens": 444,
+        "presencePenalty": 445,
+        "service": "s1be",
+        "stopSequences": [],
+        "temperature": 448,
+        "topK": 449,
+        "topP": 450
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/advanced-settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

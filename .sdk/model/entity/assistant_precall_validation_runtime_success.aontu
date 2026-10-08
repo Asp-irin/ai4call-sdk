@@ -1,0 +1,253 @@
+# Entity: assistant_precall_validation_runtime_success
+
+main: kit: entity: assistant_precall_validation_runtime_success: {
+
+  alias: field: {}
+
+  fields: {
+    authPassword: {
+      h: "Auth Password"
+      n: "authPassword"
+      r: false
+      sh: "Basic auth password (null to remove it)"
+      t: "`$STRING`"
+    }
+    authToken: {
+      h: "Auth Token"
+      n: "authToken"
+      r: false
+      sh: "Bearer token or API key (null to remove it)"
+      t: "`$STRING`"
+    }
+    authType: {
+      h: "Auth Type"
+      n: "authType"
+      r: false
+      t: "`$STRING`"
+    }
+    authUsername: {
+      h: "Auth Username"
+      n: "authUsername"
+      r: false
+      sh: "Value supplied for `authUsername` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "null if no configuration is yet present"
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    headersJson: {
+      h: "Headers Json"
+      n: "headersJson"
+      r: false
+      sh: "Value supplied for `headersJson` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$OBJECT`"
+    }
+    isActive: {
+      h: "Is Active"
+      n: "isActive"
+      r: false
+      sh: "Value supplied for `isActive` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$BOOLEAN`"
+    }
+    method: {
+      h: "Method"
+      n: "method"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      sh: "Value supplied for `name` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    numberLocation: {
+      h: "Number Location"
+      n: "numberLocation"
+      r: false
+      sh: "Where to insert the calling number in the HTTP request: - `query` — added as a query string (e.g."
+      t: "`$STRING`"
+    }
+    numberParamName: {
+      h: "Number Param Name"
+      n: "numberParamName"
+      r: false
+      sh: "Value supplied for `numberParamName` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    timeoutMs: {
+      h: "Timeout Ms"
+      n: "timeoutMs"
+      r: false
+      sh: "Value supplied for `timeoutMs` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: false
+      sh: "Value supplied for `url` in the `AssistantPrecallValidationRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_precall_validation_runtime_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/assistants/{assistantId}/runtime/precall/number-validation"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/assistants/{assistantId}/runtime/precall/number-validation"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "precall"
+            }
+            {
+              lit: "number-validation"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/precall/number-validation"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/precall/number-validation"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "precall"
+            }
+            {
+              lit: "number-validation"
+            }
+          ]
+          t: {
+            req: {
+              authPassword: "`reqdata.auth_password`"
+              authToken: "`reqdata.auth_token`"
+              authType: "`reqdata.auth_type`"
+              authUsername: "`reqdata.auth_username`"
+              headersJson: "`reqdata.headers_json`"
+              isActive: "`reqdata.is_active`"
+              method: "`reqdata.method`"
+              name: "`reqdata.name`"
+              numberLocation: "`reqdata.number_location`"
+              numberParamName: "`reqdata.number_param_name`"
+              timeoutMs: "`reqdata.timeout_m`"
+              url: "`reqdata.url`"
+            }
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

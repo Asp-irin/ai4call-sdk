@@ -1,0 +1,32 @@
+# BasicAssistantSettingsConfigurationSuccessFlow
+
+main: kit: flow: BasicAssistantSettingsConfigurationSuccessFlow:
+{
+  entity: "assistant_settings_configuration_success",
+  kind: "basic",
+  name: "BasicAssistantSettingsConfigurationSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_settings_configuration_success_ref01",
+        srcdatavar: "assistant_settings_configuration_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_settings_configuration_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_settings_configuration_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantSettingsConfigurationSuccessFlow"
+}

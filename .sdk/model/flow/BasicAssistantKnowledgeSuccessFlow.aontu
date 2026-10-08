@@ -1,0 +1,50 @@
+# BasicAssistantKnowledgeSuccessFlow
+
+main: kit: flow: BasicAssistantKnowledgeSuccessFlow:
+{
+  entity: "assistant_knowledge_success",
+  kind: "basic",
+  name: "BasicAssistantKnowledgeSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_knowledge_success_ref01",
+        srcdatavar: "assistant_knowledge_success_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_knowledge_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "assistant_knowledge_success_ref01",
+        srcdatavar: "assistant_knowledge_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_knowledge_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_knowledge_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantKnowledgeSuccessFlow"
+}

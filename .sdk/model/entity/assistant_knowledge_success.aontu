@@ -1,0 +1,255 @@
+# Entity: assistant_knowledge_success
+
+main: kit: entity: assistant_knowledge_success: {
+
+  alias: field: {}
+
+  fields: {
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "assistant_knowledge_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/assistants/{assistantId}/knowledge"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/assistants/{assistantId}/knowledge"
+          q: {
+            "$action": "knowledge"
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "knowledge"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/v1/catalog/assistants/{assistantId}/knowledge"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/catalog/assistants/{assistantId}/knowledge"
+          q: {
+            "$action": "knowledge"
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "knowledge"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /api/v1/assistants/{assistantId}/knowledge"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/api/v1/assistants/{assistantId}/knowledge"
+          q: {
+            "$action": "knowledge"
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "knowledge"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /api/v1/catalog/assistants/{assistantId}/knowledge"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/api/v1/catalog/assistants/{assistantId}/knowledge"
+          q: {
+            "$action": "knowledge"
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "knowledge"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

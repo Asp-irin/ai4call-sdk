@@ -1,0 +1,28 @@
+# BasicVoiceLlmFlow
+
+main: kit: flow: BasicVoiceLlmFlow:
+{
+  entity: "voice_llm",
+  kind: "basic",
+  name: "BasicVoiceLlmFlow",
+  step: [
+    {
+      i: {
+        ref: "voice_llm_ref01",
+        srcdatavar: "voice_llm_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-voice_llm_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicVoiceLlmFlow"
+}

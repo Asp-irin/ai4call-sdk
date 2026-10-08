@@ -1,0 +1,9 @@
+# BasicRagCollectionDocumentDeleteSuccessFlow
+
+main: kit: flow: BasicRagCollectionDocumentDeleteSuccessFlow:
+{
+  entity: "rag_collection_document_delete_success",
+  kind: "basic",
+  name: "BasicRagCollectionDocumentDeleteSuccessFlow",
+  "key$": "BasicRagCollectionDocumentDeleteSuccessFlow"
+}

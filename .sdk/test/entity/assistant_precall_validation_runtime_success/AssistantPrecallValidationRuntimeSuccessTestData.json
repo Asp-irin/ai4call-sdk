@@ -1,0 +1,88 @@
+{
+  "existing": {
+    "assistant_precall_validation_runtime_success": {
+      "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS00": {
+        "authPassword": "s82",
+        "authToken": "s83",
+        "authType": "s84",
+        "authUsername": "s85",
+        "configuration": "s86",
+        "headersJson": {},
+        "isActive": true,
+        "method": "s89",
+        "name": "s8a",
+        "numberLocation": "s8b",
+        "numberParamName": "s8c",
+        "timeoutMs": 141,
+        "url": "s8e",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS01": {
+        "authPassword": "s104",
+        "authToken": "s105",
+        "authType": "s106",
+        "authUsername": "s107",
+        "configuration": "s108",
+        "headersJson": {},
+        "isActive": true,
+        "method": "s10b",
+        "name": "s10c",
+        "numberLocation": "s10d",
+        "numberParamName": "s10e",
+        "timeoutMs": 271,
+        "url": "s110",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS02": {
+        "authPassword": "s186",
+        "authToken": "s187",
+        "authType": "s188",
+        "authUsername": "s189",
+        "configuration": "s18a",
+        "headersJson": {},
+        "isActive": true,
+        "method": "s18d",
+        "name": "s18e",
+        "numberLocation": "s18f",
+        "numberParamName": "s190",
+        "timeoutMs": 401,
+        "url": "s192",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_VALIDATION_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_precall_validation_runtime_success": {
+      "assistant_precall_validation_runtime_success_ref01": {
+        "authPassword": "s208",
+        "authToken": "s209",
+        "authType": "s20a",
+        "authUsername": "s20b",
+        "configuration": "s20c",
+        "headersJson": {},
+        "isActive": true,
+        "method": "s20f",
+        "name": "s210",
+        "numberLocation": "s211",
+        "numberParamName": "s212",
+        "timeoutMs": 531,
+        "url": "s214"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/precall/number-validation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/precall/number-validation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# BasicAssociatedRuntimeToolListSuccessFlow
+
+main: kit: flow: BasicAssociatedRuntimeToolListSuccessFlow:
+{
+  entity: "associated_runtime_tool_list_success",
+  kind: "basic",
+  name: "BasicAssociatedRuntimeToolListSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "associated_runtime_tool_list_success_ref01",
+        srcdatavar: "associated_runtime_tool_list_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "associated_runtime_tool_list_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-associated_runtime_tool_list_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssociatedRuntimeToolListSuccessFlow"
+}

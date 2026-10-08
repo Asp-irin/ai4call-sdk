@@ -1,0 +1,57 @@
+{
+  "existing": {
+    "rag_collection_document_token_estimate_success": {
+      "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS00": {
+        "estimatedCost": 60,
+        "fileCount": 61,
+        "fileDetails": [],
+        "processingTime": 63,
+        "raw": {},
+        "totalTokens": 65,
+        "id": "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS00"
+      },
+      "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS01": {
+        "estimatedCost": 120,
+        "fileCount": 121,
+        "fileDetails": [],
+        "processingTime": 123,
+        "raw": {},
+        "totalTokens": 125,
+        "id": "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS01"
+      },
+      "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS02": {
+        "estimatedCost": 180,
+        "fileCount": 181,
+        "fileDetails": [],
+        "processingTime": 183,
+        "raw": {},
+        "totalTokens": 185,
+        "id": "RAG_COLLECTION_DOCUMENT_TOKEN_ESTIMATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "rag_collection_document_token_estimate_success": {
+      "rag_collection_document_token_estimate_success_ref01": {
+        "estimatedCost": 240,
+        "fileCount": 241,
+        "fileDetails": [],
+        "processingTime": 243,
+        "raw": {},
+        "totalTokens": 245
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/catalog/rag/documents/estimate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /api/v1/rag/documents/estimate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "existing": {
+    "assistant_knowledge_success": {
+      "ASSISTANT_KNOWLEDGE_SUCCESS00": {
+        "id": "ASSISTANT_KNOWLEDGE_SUCCESS00"
+      },
+      "ASSISTANT_KNOWLEDGE_SUCCESS01": {
+        "id": "ASSISTANT_KNOWLEDGE_SUCCESS01"
+      },
+      "ASSISTANT_KNOWLEDGE_SUCCESS02": {
+        "id": "ASSISTANT_KNOWLEDGE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_knowledge_success": {
+      "assistant_knowledge_success_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/assistants/{assistantId}/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/assistants/{assistantId}/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/catalog/assistants/{assistantId}/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

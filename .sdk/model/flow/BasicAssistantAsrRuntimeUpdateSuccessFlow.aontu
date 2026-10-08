@@ -1,0 +1,29 @@
+# BasicAssistantAsrRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantAsrRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_asr_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantAsrRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_asr_runtime_update_success_ref01",
+        srcdatavar: "assistant_asr_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "apiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_asr_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantAsrRuntimeUpdateSuccessFlow"
+}

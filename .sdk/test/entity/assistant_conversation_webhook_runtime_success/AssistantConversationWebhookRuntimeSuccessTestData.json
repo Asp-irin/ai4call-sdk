@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "assistant_conversation_webhook_runtime_success": {
+      "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS00": {
+        "authName": "s28",
+        "configuration": {},
+        "enabled": true,
+        "url": "s2b",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS01": {
+        "authName": "s50",
+        "configuration": {},
+        "enabled": true,
+        "url": "s53",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS02": {
+        "authName": "s78",
+        "configuration": {},
+        "enabled": true,
+        "url": "s7b",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_CONVERSATION_WEBHOOK_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_conversation_webhook_runtime_success": {
+      "assistant_conversation_webhook_runtime_success_ref01": {
+        "authName": "sa0",
+        "configuration": {},
+        "enabled": true,
+        "url": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/hangup/conversation-webhook": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/hangup/conversation-webhook": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

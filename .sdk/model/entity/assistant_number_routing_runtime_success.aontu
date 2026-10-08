@@ -1,0 +1,106 @@
+# Entity: assistant_number_routing_runtime_success
+
+main: kit: entity: assistant_number_routing_runtime_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    demoNumbers: {
+      h: "Demo Numbers"
+      n: "demoNumbers"
+      r: false
+      sh: "Demo numbers to route to this assistant"
+      t: "`$ARRAY`"
+    }
+    purchasedNumbers: {
+      h: "Purchased Numbers"
+      n: "purchasedNumbers"
+      r: false
+      sh: "Purchased numbers to route to this assistant"
+      t: "`$ARRAY`"
+    }
+    userNumbers: {
+      h: "User Numbers"
+      n: "userNumbers"
+      r: false
+      sh: "Customer's own numbers (own PBX) to route to this assistant"
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "assistant_number_routing_runtime_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/number-routing"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/number-routing"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "number-routing"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

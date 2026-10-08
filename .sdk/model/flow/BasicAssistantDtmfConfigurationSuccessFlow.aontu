@@ -1,0 +1,32 @@
+# BasicAssistantDtmfConfigurationSuccessFlow
+
+main: kit: flow: BasicAssistantDtmfConfigurationSuccessFlow:
+{
+  entity: "assistant_dtmf_configuration_success",
+  kind: "basic",
+  name: "BasicAssistantDtmfConfigurationSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_dtmf_configuration_success_ref01",
+        srcdatavar: "assistant_dtmf_configuration_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_dtmf_configuration_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_dtmf_configuration_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantDtmfConfigurationSuccessFlow"
+}

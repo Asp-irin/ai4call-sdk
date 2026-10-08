@@ -1,0 +1,95 @@
+{
+  "existing": {
+    "assistant_settings_runtime_update_success": {
+      "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS00": {
+        "asrInitialDelayMs": 160,
+        "asrSilenceMs": 161,
+        "assistantApiKey": "sa2",
+        "assistantId": "sa3",
+        "callPermissions": {},
+        "configuration": {},
+        "dynamicTimeoutMs": 166,
+        "filler": {},
+        "maxResponseLength": 168,
+        "reprompt": {},
+        "service": "saa",
+        "truncateInitialAudio": false,
+        "ttsInterruptionInConversation": true,
+        "vad": false,
+        "vadMinVoiceMs": 174,
+        "vadThreshold": 175,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS01": {
+        "asrInitialDelayMs": 320,
+        "asrSilenceMs": 321,
+        "assistantApiKey": "s142",
+        "assistantId": "s143",
+        "callPermissions": {},
+        "configuration": {},
+        "dynamicTimeoutMs": 326,
+        "filler": {},
+        "maxResponseLength": 328,
+        "reprompt": {},
+        "service": "s14a",
+        "truncateInitialAudio": false,
+        "ttsInterruptionInConversation": true,
+        "vad": false,
+        "vadMinVoiceMs": 334,
+        "vadThreshold": 335,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS02": {
+        "asrInitialDelayMs": 480,
+        "asrSilenceMs": 481,
+        "assistantApiKey": "s1e2",
+        "assistantId": "s1e3",
+        "callPermissions": {},
+        "configuration": {},
+        "dynamicTimeoutMs": 486,
+        "filler": {},
+        "maxResponseLength": 488,
+        "reprompt": {},
+        "service": "s1ea",
+        "truncateInitialAudio": false,
+        "ttsInterruptionInConversation": true,
+        "vad": false,
+        "vadMinVoiceMs": 494,
+        "vadThreshold": 495,
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SETTINGS_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_settings_runtime_update_success": {
+      "assistant_settings_runtime_update_success_ref01": {
+        "asrInitialDelayMs": 640,
+        "asrSilenceMs": 641,
+        "assistantApiKey": "s282",
+        "assistantId": "s283",
+        "callPermissions": {},
+        "configuration": {},
+        "dynamicTimeoutMs": 646,
+        "filler": {},
+        "maxResponseLength": 648,
+        "reprompt": {},
+        "service": "s28a",
+        "truncateInitialAudio": false,
+        "ttsInterruptionInConversation": true,
+        "vad": false,
+        "vadMinVoiceMs": 654,
+        "vadThreshold": 655
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

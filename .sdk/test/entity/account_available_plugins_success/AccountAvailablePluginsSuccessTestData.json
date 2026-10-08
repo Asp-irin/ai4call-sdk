@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "account_available_plugins_success": {
+      "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS00"
+      },
+      "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS01"
+      },
+      "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "ACCOUNT_AVAILABLE_PLUGINS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_available_plugins_success": {
+      "account_available_plugins_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/plugins/available": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

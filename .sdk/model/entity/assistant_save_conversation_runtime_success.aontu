@@ -1,0 +1,180 @@
+# Entity: assistant_save_conversation_runtime_success
+
+main: kit: entity: assistant_save_conversation_runtime_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    emails: {
+      h: "Emails"
+      n: "emails"
+      r: false
+      sh: "One or more recipient emails separated by commas (e.g."
+      t: "`$STRING`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      sh: "Enable or disable sending of the conversation summary via email"
+      t: "`$BOOLEAN`"
+    }
+    smtpInstanceName: {
+      h: "Smtp Instance Name"
+      n: "smtpInstanceName"
+      r: false
+      sh: "Name of the SMTP plugin instance to use for sending"
+      t: "`$STRING`"
+    }
+    smtp_instance_name: {
+      de: true
+      h: "Smtp Instance Name"
+      n: "smtp_instance_name"
+      r: false
+      sh: "Legacy alias of `smtpInstanceName`."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_save_conversation_runtime_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/assistants/{assistantId}/runtime/hangup/save-conversation"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/assistants/{assistantId}/runtime/hangup/save-conversation"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "hangup"
+            }
+            {
+              lit: "save-conversation"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/hangup/save-conversation"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/hangup/save-conversation"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "hangup"
+            }
+            {
+              lit: "save-conversation"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

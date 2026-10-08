@@ -1,0 +1,67 @@
+{
+  "existing": {
+    "assistant_hangup_runtime_update_success": {
+      "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS00": {
+        "assistantApiKey": "s5a",
+        "assistantId": "s5b",
+        "availableAgents": [],
+        "configuration": {},
+        "enableHangup": true,
+        "enableRedirect": false,
+        "enableTransferAgent": true,
+        "service": "s61",
+        "transferAgentNotificationText": "s62",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS01": {
+        "assistantApiKey": "sb4",
+        "assistantId": "sb5",
+        "availableAgents": [],
+        "configuration": {},
+        "enableHangup": true,
+        "enableRedirect": false,
+        "enableTransferAgent": true,
+        "service": "sbb",
+        "transferAgentNotificationText": "sbc",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS02": {
+        "assistantApiKey": "s10e",
+        "assistantId": "s10f",
+        "availableAgents": [],
+        "configuration": {},
+        "enableHangup": true,
+        "enableRedirect": false,
+        "enableTransferAgent": true,
+        "service": "s115",
+        "transferAgentNotificationText": "s116",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_hangup_runtime_update_success": {
+      "assistant_hangup_runtime_update_success_ref01": {
+        "assistantApiKey": "s168",
+        "assistantId": "s169",
+        "availableAgents": [],
+        "configuration": {},
+        "enableHangup": true,
+        "enableRedirect": false,
+        "enableTransferAgent": true,
+        "service": "s16f",
+        "transferAgentNotificationText": "s170"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/hangup": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

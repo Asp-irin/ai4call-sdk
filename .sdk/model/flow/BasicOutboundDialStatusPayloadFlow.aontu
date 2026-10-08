@@ -1,0 +1,32 @@
+# BasicOutboundDialStatusPayloadFlow
+
+main: kit: flow: BasicOutboundDialStatusPayloadFlow:
+{
+  entity: "outbound_dial_status_payload",
+  kind: "basic",
+  name: "BasicOutboundDialStatusPayloadFlow",
+  step: [
+    {
+      i: {
+        ref: "outbound_dial_status_payload_ref01",
+        srcdatavar: "outbound_dial_status_payload_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "outbound_dial_status_payload01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-outbound_dial_status_payload_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOutboundDialStatusPayloadFlow"
+}

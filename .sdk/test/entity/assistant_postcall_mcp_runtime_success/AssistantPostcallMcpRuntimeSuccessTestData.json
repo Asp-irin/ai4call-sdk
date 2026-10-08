@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "assistant_postcall_mcp_runtime_success": {
+      "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS00": {
+        "configuration": {},
+        "enabled": false,
+        "globalPrompt": "s34",
+        "modelConfig": {},
+        "tools": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS01": {
+        "configuration": {},
+        "enabled": false,
+        "globalPrompt": "s66",
+        "modelConfig": {},
+        "tools": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS02": {
+        "configuration": {},
+        "enabled": false,
+        "globalPrompt": "s98",
+        "modelConfig": {},
+        "tools": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_POSTCALL_MCP_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_postcall_mcp_runtime_success": {
+      "assistant_postcall_mcp_runtime_success_ref01": {
+        "configuration": {},
+        "enabled": false,
+        "globalPrompt": "sca",
+        "modelConfig": {},
+        "tools": []
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/postcall/mcp-config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/postcall/mcp-config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

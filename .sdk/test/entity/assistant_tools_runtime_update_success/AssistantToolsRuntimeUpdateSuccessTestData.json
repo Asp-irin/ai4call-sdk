@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "assistant_tools_runtime_update_success": {
+      "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS00": {
+        "assistantApiKey": "s28",
+        "assistantId": "s29",
+        "configuration": {},
+        "service": "s2b",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS01": {
+        "assistantApiKey": "s50",
+        "assistantId": "s51",
+        "configuration": {},
+        "service": "s53",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS02": {
+        "assistantApiKey": "s78",
+        "assistantId": "s79",
+        "configuration": {},
+        "service": "s7b",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TOOLS_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_tools_runtime_update_success": {
+      "assistant_tools_runtime_update_success_ref01": {
+        "assistantApiKey": "sa0",
+        "assistantId": "sa1",
+        "configuration": {},
+        "service": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/tools": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

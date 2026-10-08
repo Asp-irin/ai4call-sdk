@@ -1,0 +1,186 @@
+# Entity: assistant_postcall_mcp_runtime_success
+
+main: kit: entity: assistant_postcall_mcp_runtime_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "General configuration of the post-call phase."
+      t: "`$OBJECT`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      sh: "Enable or disable the whole post-call phase without losing its configuration."
+      t: "`$BOOLEAN`"
+    }
+    globalPrompt: {
+      h: "Global Prompt"
+      n: "globalPrompt"
+      r: false
+      sh: "Global post-call prompt."
+      t: "`$STRING`"
+    }
+    modelConfig: {
+      h: "Model Config"
+      n: "modelConfig"
+      r: true
+      sh: "Model configuration used by the MCP phase."
+      t: "`$OBJECT`"
+    }
+    tools: {
+      h: "Tools"
+      n: "tools"
+      op: {
+        update: {
+          req: false
+          type: "`$ARRAY`"
+        }
+      }
+      r: true
+      sh: "Complete list of post-call tools to set up."
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "assistant_postcall_mcp_runtime_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/assistants/{assistantId}/runtime/postcall/mcp-config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/assistants/{assistantId}/runtime/postcall/mcp-config"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "postcall"
+            }
+            {
+              lit: "mcp-config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/postcall/mcp-config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/postcall/mcp-config"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "postcall"
+            }
+            {
+              lit: "mcp-config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

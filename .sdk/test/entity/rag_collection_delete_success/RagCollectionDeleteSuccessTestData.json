@@ -1,0 +1,92 @@
+{
+  "existing": {
+    "rag_collection_delete_success": {
+      "RAG_COLLECTION_DELETE_SUCCESS00": {
+        "data": {},
+        "description": "s5b",
+        "maxChunkSize": 92,
+        "maxChunksPerFile": 93,
+        "message": "s5e",
+        "meta": {},
+        "name": "s60",
+        "requestId": "s61",
+        "success": true,
+        "rag_id": "RAG01",
+        "id": "RAG_COLLECTION_DELETE_SUCCESS00"
+      },
+      "RAG_COLLECTION_DELETE_SUCCESS01": {
+        "data": {},
+        "description": "sb5",
+        "maxChunkSize": 182,
+        "maxChunksPerFile": 183,
+        "message": "sb8",
+        "meta": {},
+        "name": "sba",
+        "requestId": "sbb",
+        "success": true,
+        "rag_id": "RAG01",
+        "id": "RAG_COLLECTION_DELETE_SUCCESS01"
+      },
+      "RAG_COLLECTION_DELETE_SUCCESS02": {
+        "data": {},
+        "description": "s10f",
+        "maxChunkSize": 272,
+        "maxChunksPerFile": 273,
+        "message": "s112",
+        "meta": {},
+        "name": "s114",
+        "requestId": "s115",
+        "success": true,
+        "rag_id": "RAG01",
+        "id": "RAG_COLLECTION_DELETE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "rag_collection_delete_success": {
+      "rag_collection_delete_success_ref01": {
+        "data": {},
+        "description": "s169",
+        "maxChunkSize": 362,
+        "maxChunksPerFile": 363,
+        "message": "s16c",
+        "meta": {},
+        "name": "s16e",
+        "requestId": "s16f",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/catalog/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /api/v1/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/rag/collections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/catalog/rag/collections/{ragId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/rag/collections/{ragId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

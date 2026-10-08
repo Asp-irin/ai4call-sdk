@@ -1,0 +1,28 @@
+# BasicAnalyticsRechargesSuccessFlow
+
+main: kit: flow: BasicAnalyticsRechargesSuccessFlow:
+{
+  entity: "analytics_recharges_success",
+  kind: "basic",
+  name: "BasicAnalyticsRechargesSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "analytics_recharges_success_ref01",
+        srcdatavar: "analytics_recharges_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-analytics_recharges_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAnalyticsRechargesSuccessFlow"
+}

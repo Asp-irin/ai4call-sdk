@@ -1,0 +1,96 @@
+{
+  "existing": {
+    "outbound_call_accepted_success": {
+      "OUTBOUND_CALL_ACCEPTED_SUCCESS00": {
+        "AddPrompt": "saa",
+        "addPrompt": "sab",
+        "apiKey_assistente": "sac",
+        "assistantApiKey": "sad",
+        "callId": "sae",
+        "callResultUrl": "saf",
+        "callbackConfigured": true,
+        "callerId": "sb1",
+        "dst": "sb2",
+        "internalId": "sb3",
+        "ipPbx": "sb4",
+        "ip_pbx": "sb5",
+        "method_uac": true,
+        "sipPort": "sb7",
+        "sip_port": "sb8",
+        "status": "sb9",
+        "url_esito_chiamata": "sba",
+        "id": "OUTBOUND_CALL_ACCEPTED_SUCCESS00"
+      },
+      "OUTBOUND_CALL_ACCEPTED_SUCCESS01": {
+        "AddPrompt": "s154",
+        "addPrompt": "s155",
+        "apiKey_assistente": "s156",
+        "assistantApiKey": "s157",
+        "callId": "s158",
+        "callResultUrl": "s159",
+        "callbackConfigured": true,
+        "callerId": "s15b",
+        "dst": "s15c",
+        "internalId": "s15d",
+        "ipPbx": "s15e",
+        "ip_pbx": "s15f",
+        "method_uac": true,
+        "sipPort": "s161",
+        "sip_port": "s162",
+        "status": "s163",
+        "url_esito_chiamata": "s164",
+        "id": "OUTBOUND_CALL_ACCEPTED_SUCCESS01"
+      },
+      "OUTBOUND_CALL_ACCEPTED_SUCCESS02": {
+        "AddPrompt": "s1fe",
+        "addPrompt": "s1ff",
+        "apiKey_assistente": "s200",
+        "assistantApiKey": "s201",
+        "callId": "s202",
+        "callResultUrl": "s203",
+        "callbackConfigured": true,
+        "callerId": "s205",
+        "dst": "s206",
+        "internalId": "s207",
+        "ipPbx": "s208",
+        "ip_pbx": "s209",
+        "method_uac": true,
+        "sipPort": "s20b",
+        "sip_port": "s20c",
+        "status": "s20d",
+        "url_esito_chiamata": "s20e",
+        "id": "OUTBOUND_CALL_ACCEPTED_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "outbound_call_accepted_success": {
+      "outbound_call_accepted_success_ref01": {
+        "AddPrompt": "s2a8",
+        "addPrompt": "s2a9",
+        "apiKey_assistente": "s2aa",
+        "assistantApiKey": "s2ab",
+        "callId": "s2ac",
+        "callResultUrl": "s2ad",
+        "callbackConfigured": true,
+        "callerId": "s2af",
+        "dst": "s2b0",
+        "internalId": "s2b1",
+        "ipPbx": "s2b2",
+        "ip_pbx": "s2b3",
+        "method_uac": true,
+        "sipPort": "s2b5",
+        "sip_port": "s2b6",
+        "status": "s2b7",
+        "url_esito_chiamata": "s2b8"
+      }
+    }
+  },
+  "requests": {
+    "POST /webhook/outbound_call_pbx": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

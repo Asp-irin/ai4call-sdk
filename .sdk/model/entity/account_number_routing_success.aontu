@@ -1,0 +1,131 @@
+# Entity: account_number_routing_success
+
+main: kit: entity: account_number_routing_success: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$OBJECT`"
+    }
+    demoNumbers: {
+      h: "Demo Numbers"
+      n: "demoNumbers"
+      r: false
+      sh: "Value supplied for `demoNumbers` in the `AccountNumberRoutingUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    message: {
+      h: "Message"
+      n: "message"
+      r: true
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    purchasedNumbers: {
+      h: "Purchased Numbers"
+      n: "purchasedNumbers"
+      r: false
+      sh: "Value supplied for `purchasedNumbers` in the `AccountNumberRoutingUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    requestId: {
+      h: "Request Id"
+      n: "requestId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    userNumbers: {
+      h: "User Numbers"
+      n: "userNumbers"
+      r: false
+      sh: "Value supplied for `userNumbers` in the `AccountNumberRoutingUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "account_number_routing_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/account/number-routing"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/account/number-routing"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "number-routing"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/account/number-routing"
+            source: "openapi3"
+            version: 2
+          }
+          m: "PATCH"
+          o: "/api/v1/account/number-routing"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "number-routing"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

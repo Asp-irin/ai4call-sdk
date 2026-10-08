@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "assistant_voice_to_voice_runtime_update_success": {
+      "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS00": {
+        "apiKey": "s6e",
+        "assistantApiKey": "s6f",
+        "assistantId": "s70",
+        "baseUrl": "s71",
+        "configuration": {},
+        "engineCode": "s73",
+        "modelCode": "s74",
+        "prompt": "s75",
+        "providerWalletId": 118,
+        "service": "s77",
+        "voiceCode": "s78",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS01": {
+        "apiKey": "sdc",
+        "assistantApiKey": "sdd",
+        "assistantId": "sde",
+        "baseUrl": "sdf",
+        "configuration": {},
+        "engineCode": "se1",
+        "modelCode": "se2",
+        "prompt": "se3",
+        "providerWalletId": 228,
+        "service": "se5",
+        "voiceCode": "se6",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS02": {
+        "apiKey": "s14a",
+        "assistantApiKey": "s14b",
+        "assistantId": "s14c",
+        "baseUrl": "s14d",
+        "configuration": {},
+        "engineCode": "s14f",
+        "modelCode": "s150",
+        "prompt": "s151",
+        "providerWalletId": 338,
+        "service": "s153",
+        "voiceCode": "s154",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_VOICE_TO_VOICE_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_voice_to_voice_runtime_update_success": {
+      "assistant_voice_to_voice_runtime_update_success_ref01": {
+        "apiKey": "s1b8",
+        "assistantApiKey": "s1b9",
+        "assistantId": "s1ba",
+        "baseUrl": "s1bb",
+        "configuration": {},
+        "engineCode": "s1bd",
+        "modelCode": "s1be",
+        "prompt": "s1bf",
+        "providerWalletId": 448,
+        "service": "s1c1",
+        "voiceCode": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/audio-to-audio": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/voice-to-voice": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

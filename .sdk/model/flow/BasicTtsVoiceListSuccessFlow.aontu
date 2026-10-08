@@ -1,0 +1,32 @@
+# BasicTtsVoiceListSuccessFlow
+
+main: kit: flow: BasicTtsVoiceListSuccessFlow:
+{
+  entity: "tts_voice_list_success",
+  kind: "basic",
+  name: "BasicTtsVoiceListSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "tts_voice_list_success_ref01",
+        srcdatavar: "tts_voice_list_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tts_voice_list_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tts_voice_list_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTtsVoiceListSuccessFlow"
+}

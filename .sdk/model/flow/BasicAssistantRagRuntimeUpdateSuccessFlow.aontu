@@ -1,0 +1,29 @@
+# BasicAssistantRagRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantRagRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_rag_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantRagRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_rag_runtime_update_success_ref01",
+        srcdatavar: "assistant_rag_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "assistantApiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_rag_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantRagRuntimeUpdateSuccessFlow"
+}

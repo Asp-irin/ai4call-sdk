@@ -1,0 +1,47 @@
+# BasicAccountCallLimitsSuccessFlow
+
+main: kit: flow: BasicAccountCallLimitsSuccessFlow:
+{
+  entity: "account_call_limits_success",
+  kind: "basic",
+  name: "BasicAccountCallLimitsSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_call_limits_success_ref01",
+        srcdatavar: "account_call_limits_success_ref01_data",
+        suffix: "_up0",
+        textfield: "message"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_call_limits_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "account_call_limits_success_ref01",
+        srcdatavar: "account_call_limits_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_call_limits_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountCallLimitsSuccessFlow"
+}

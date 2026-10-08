@@ -1,0 +1,18 @@
+# BasicPortalLoginSuccessFlow
+
+main: kit: flow: BasicPortalLoginSuccessFlow:
+{
+  entity: "portal_login_success",
+  kind: "basic",
+  name: "BasicPortalLoginSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "portal_login_success_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicPortalLoginSuccessFlow"
+}

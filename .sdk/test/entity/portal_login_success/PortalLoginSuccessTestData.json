@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "portal_login_success": {
+      "PORTAL_LOGIN_SUCCESS00": {
+        "client": {},
+        "email": "s1f",
+        "portalApiKey": "s20",
+        "id": "PORTAL_LOGIN_SUCCESS00"
+      },
+      "PORTAL_LOGIN_SUCCESS01": {
+        "client": {},
+        "email": "s3d",
+        "portalApiKey": "s3e",
+        "id": "PORTAL_LOGIN_SUCCESS01"
+      },
+      "PORTAL_LOGIN_SUCCESS02": {
+        "client": {},
+        "email": "s5b",
+        "portalApiKey": "s5c",
+        "id": "PORTAL_LOGIN_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "portal_login_success": {
+      "portal_login_success_ref01": {
+        "client": {},
+        "email": "s79",
+        "portalApiKey": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/auth/portal/login": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

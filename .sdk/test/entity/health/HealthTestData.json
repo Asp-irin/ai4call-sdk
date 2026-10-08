@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "health": {
+      "HEALTH00": {
+        "dataSource": "s1e",
+        "service": "s1f",
+        "status": "s20",
+        "id": "HEALTH00"
+      },
+      "HEALTH01": {
+        "dataSource": "s3c",
+        "service": "s3d",
+        "status": "s3e",
+        "id": "HEALTH01"
+      },
+      "HEALTH02": {
+        "dataSource": "s5a",
+        "service": "s5b",
+        "status": "s5c",
+        "id": "HEALTH02"
+      }
+    }
+  },
+  "new": {
+    "health": {
+      "health_ref01": {
+        "dataSource": "s78",
+        "service": "s79",
+        "status": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /health": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

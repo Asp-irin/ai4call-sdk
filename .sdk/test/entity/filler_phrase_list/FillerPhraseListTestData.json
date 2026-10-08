@@ -1,0 +1,140 @@
+{
+  "existing": {
+    "filler_phrase_list": {
+      "FILLER_PHRASE_LIST00": {
+        "associations": {},
+        "data": {},
+        "id": "FILLER_PHRASE_LIST00",
+        "list": {},
+        "message": "s7c",
+        "meta": {},
+        "name": "s7e",
+        "phrases": [],
+        "requestId": "s80",
+        "success": false,
+        "toolListIds": [],
+        "waitingListIds": [],
+        "assistant_id": "ASSISTANT01"
+      },
+      "FILLER_PHRASE_LIST01": {
+        "associations": {},
+        "data": {},
+        "id": "FILLER_PHRASE_LIST01",
+        "list": {},
+        "message": "sf4",
+        "meta": {},
+        "name": "sf6",
+        "phrases": [],
+        "requestId": "sf8",
+        "success": false,
+        "toolListIds": [],
+        "waitingListIds": [],
+        "assistant_id": "ASSISTANT01"
+      },
+      "FILLER_PHRASE_LIST02": {
+        "associations": {},
+        "data": {},
+        "id": "FILLER_PHRASE_LIST02",
+        "list": {},
+        "message": "s16c",
+        "meta": {},
+        "name": "s16e",
+        "phrases": [],
+        "requestId": "s170",
+        "success": false,
+        "toolListIds": [],
+        "waitingListIds": [],
+        "assistant_id": "ASSISTANT01"
+      }
+    }
+  },
+  "new": {
+    "filler_phrase_list": {
+      "filler_phrase_list_ref01": {
+        "associations": {},
+        "data": {},
+        "list": {},
+        "message": "s1e4",
+        "meta": {},
+        "name": "s1e6",
+        "phrases": [],
+        "requestId": "s1e8",
+        "success": false,
+        "toolListIds": [],
+        "waitingListIds": []
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/catalog/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /api/v1/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/assistants/{assistantId}/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/assistants/{assistantId}/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/catalog/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/assistants/{assistantId}/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/catalog/assistants/{assistantId}/filler-phrase-lists": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/catalog/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /api/v1/filler-phrase-lists/{listId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

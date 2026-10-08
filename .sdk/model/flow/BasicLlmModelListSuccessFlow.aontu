@@ -1,0 +1,32 @@
+# BasicLlmModelListSuccessFlow
+
+main: kit: flow: BasicLlmModelListSuccessFlow:
+{
+  entity: "llm_model_list_success",
+  kind: "basic",
+  name: "BasicLlmModelListSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "llm_model_list_success_ref01",
+        srcdatavar: "llm_model_list_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "llm_model_list_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-llm_model_list_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicLlmModelListSuccessFlow"
+}

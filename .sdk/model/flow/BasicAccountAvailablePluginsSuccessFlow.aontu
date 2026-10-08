@@ -1,0 +1,28 @@
+# BasicAccountAvailablePluginsSuccessFlow
+
+main: kit: flow: BasicAccountAvailablePluginsSuccessFlow:
+{
+  entity: "account_available_plugins_success",
+  kind: "basic",
+  name: "BasicAccountAvailablePluginsSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_available_plugins_success_ref01",
+        srcdatavar: "account_available_plugins_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_available_plugins_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAccountAvailablePluginsSuccessFlow"
+}

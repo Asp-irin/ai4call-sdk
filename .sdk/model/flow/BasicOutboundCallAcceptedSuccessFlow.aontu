@@ -1,0 +1,18 @@
+# BasicOutboundCallAcceptedSuccessFlow
+
+main: kit: flow: BasicOutboundCallAcceptedSuccessFlow:
+{
+  entity: "outbound_call_accepted_success",
+  kind: "basic",
+  name: "BasicOutboundCallAcceptedSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "outbound_call_accepted_success_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicOutboundCallAcceptedSuccessFlow"
+}

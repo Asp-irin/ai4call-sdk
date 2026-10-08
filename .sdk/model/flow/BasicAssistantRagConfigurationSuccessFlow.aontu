@@ -1,0 +1,32 @@
+# BasicAssistantRagConfigurationSuccessFlow
+
+main: kit: flow: BasicAssistantRagConfigurationSuccessFlow:
+{
+  entity: "assistant_rag_configuration_success",
+  kind: "basic",
+  name: "BasicAssistantRagConfigurationSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_rag_configuration_success_ref01",
+        srcdatavar: "assistant_rag_configuration_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_rag_configuration_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_rag_configuration_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantRagConfigurationSuccessFlow"
+}

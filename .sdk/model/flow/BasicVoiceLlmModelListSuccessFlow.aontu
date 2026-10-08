@@ -1,0 +1,32 @@
+# BasicVoiceLlmModelListSuccessFlow
+
+main: kit: flow: BasicVoiceLlmModelListSuccessFlow:
+{
+  entity: "voice_llm_model_list_success",
+  kind: "basic",
+  name: "BasicVoiceLlmModelListSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "voice_llm_model_list_success_ref01",
+        srcdatavar: "voice_llm_model_list_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "voice_llm_model_list_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-voice_llm_model_list_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicVoiceLlmModelListSuccessFlow"
+}

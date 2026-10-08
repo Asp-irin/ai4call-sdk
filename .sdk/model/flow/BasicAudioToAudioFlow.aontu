@@ -1,0 +1,28 @@
+# BasicAudioToAudioFlow
+
+main: kit: flow: BasicAudioToAudioFlow:
+{
+  entity: "audio_to_audio",
+  kind: "basic",
+  name: "BasicAudioToAudioFlow",
+  step: [
+    {
+      i: {
+        ref: "audio_to_audio_ref01",
+        srcdatavar: "audio_to_audio_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-audio_to_audio_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAudioToAudioFlow"
+}

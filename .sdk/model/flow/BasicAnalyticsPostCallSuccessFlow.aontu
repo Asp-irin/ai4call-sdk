@@ -1,0 +1,28 @@
+# BasicAnalyticsPostCallSuccessFlow
+
+main: kit: flow: BasicAnalyticsPostCallSuccessFlow:
+{
+  entity: "analytics_post_call_success",
+  kind: "basic",
+  name: "BasicAnalyticsPostCallSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "analytics_post_call_success_ref01",
+        srcdatavar: "analytics_post_call_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-analytics_post_call_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAnalyticsPostCallSuccessFlow"
+}

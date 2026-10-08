@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "provider_wallet_associations_success": {
+      "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS00"
+      },
+      "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS01"
+      },
+      "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "PROVIDER_WALLET_ASSOCIATIONS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "provider_wallet_associations_success": {
+      "provider_wallet_associations_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/provider-wallet/assistants/{assistantId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+# Entity: account_allowed_ips_success
+
+main: kit: entity: account_allowed_ips_success: {
+
+  alias: field: {}
+
+  fields: {
+    addIps: {
+      h: "Add Ips"
+      n: "addIps"
+      r: false
+      sh: "Value supplied for `addIps` in the `AccountAllowedIpsUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    allowedIps: {
+      h: "Allowed Ips"
+      n: "allowedIps"
+      r: false
+      sh: "Value supplied for `allowedIps` in the `AccountAllowedIpsUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$OBJECT`"
+    }
+    deleteIps: {
+      h: "Delete Ips"
+      n: "deleteIps"
+      r: false
+      sh: "Value supplied for `deleteIps` in the `AccountAllowedIpsUpdateRequest` request."
+      t: "`$ARRAY`"
+    }
+    message: {
+      h: "Message"
+      n: "message"
+      r: true
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    requestId: {
+      h: "Request Id"
+      n: "requestId"
+      r: true
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "account_allowed_ips_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/account/allowed-ips"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/api/v1/account/allowed-ips"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "allowed-ips"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/account/allowed-ips"
+            source: "openapi3"
+            version: 2
+          }
+          m: "PATCH"
+          o: "/api/v1/account/allowed-ips"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "allowed-ips"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

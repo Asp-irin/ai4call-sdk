@@ -1,0 +1,29 @@
+# BasicAssistantHangupRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantHangupRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_hangup_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantHangupRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_hangup_runtime_update_success_ref01",
+        srcdatavar: "assistant_hangup_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "assistantApiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_hangup_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantHangupRuntimeUpdateSuccessFlow"
+}

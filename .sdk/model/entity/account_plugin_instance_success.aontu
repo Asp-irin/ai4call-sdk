@@ -1,0 +1,350 @@
+# Entity: account_plugin_instance_success
+
+main: kit: entity: account_plugin_instance_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "Current lifecycle information for one purchased plugin instance."
+      t: "`$OBJECT`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$OBJECT`"
+    }
+    instanceName: {
+      h: "Instance Name"
+      n: "instanceName"
+      r: false
+      sh: "Value supplied for `instanceName` in the `AccountPluginPurchaseRequest` request."
+      t: "`$STRING`"
+    }
+    instance_name: {
+      de: true
+      h: "Instance Name"
+      n: "instance_name"
+      r: false
+      sh: "Legacy alias of `instanceName`."
+      t: "`$STRING`"
+    }
+    message: {
+      h: "Message"
+      n: "message"
+      r: true
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    newInstanceName: {
+      h: "New Instance Name"
+      n: "newInstanceName"
+      r: false
+      sh: "Value supplied for `newInstanceName` in the `AccountPluginInstanceByIdUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    new_instance_name: {
+      de: true
+      h: "New Instance Name"
+      n: "new_instance_name"
+      r: false
+      sh: "Legacy alias of `newInstanceName`."
+      t: "`$STRING`"
+    }
+    pluginName: {
+      h: "Plugin Name"
+      n: "pluginName"
+      r: false
+      sh: "Value supplied for `pluginName` in the `AccountPluginPurchaseRequest` request."
+      t: "`$STRING`"
+    }
+    plugin_name: {
+      de: true
+      h: "Plugin Name"
+      n: "plugin_name"
+      r: false
+      sh: "Legacy alias of `pluginName`."
+      t: "`$STRING`"
+    }
+    requestId: {
+      h: "Request Id"
+      n: "requestId"
+      r: true
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: false
+      sh: "Value supplied for `status` in the `AccountPluginInstanceUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    success: {
+      h: "Success"
+      n: "success"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "account_plugin_instance_success"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /api/v1/account/plugins/instances"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/api/v1/account/plugins/instances"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/account/plugins/instances"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/account/plugins/instances"
+          q: {
+            exist: [
+              "cursor"
+              "limit"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /api/v1/account/plugins/instances/{instanceId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "instance_id"
+                or: "instanceId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/api/v1/account/plugins/instances/{instanceId}"
+          q: {
+            exist: [
+              "instance_id"
+            ]
+          }
+          r: {
+            param: {
+              instanceId: "instance_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "instance_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/account/plugins/instances/{instanceId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "instance_id"
+                or: "instanceId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/account/plugins/instances/{instanceId}"
+          q: {
+            exist: [
+              "instance_id"
+            ]
+          }
+          r: {
+            param: {
+              instanceId: "instance_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "instance_id"
+            }
+          ]
+          t: {
+            req: {
+              newInstanceName: "`reqdata.new_instance_name`"
+              new_instance_name: "`reqdata.new_instance_name`"
+            }
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "PATCH /api/v1/account/plugins/instances"
+            source: "openapi3"
+            version: 2
+          }
+          m: "PATCH"
+          o: "/api/v1/account/plugins/instances"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

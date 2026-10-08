@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "outbound_dial_status_payload": {
+      "OUTBOUND_DIAL_STATUS_PAYLOAD00": {
+        "billSec": 30,
+        "dialStatus": "s1f",
+        "trafficCost": "s20",
+        "uuid": "UUID01",
+        "id": "OUTBOUND_DIAL_STATUS_PAYLOAD00"
+      },
+      "OUTBOUND_DIAL_STATUS_PAYLOAD01": {
+        "billSec": 60,
+        "dialStatus": "s3d",
+        "trafficCost": "s3e",
+        "uuid": "UUID01",
+        "id": "OUTBOUND_DIAL_STATUS_PAYLOAD01"
+      },
+      "OUTBOUND_DIAL_STATUS_PAYLOAD02": {
+        "billSec": 90,
+        "dialStatus": "s5b",
+        "trafficCost": "s5c",
+        "uuid": "UUID01",
+        "id": "OUTBOUND_DIAL_STATUS_PAYLOAD02"
+      }
+    }
+  },
+  "new": {
+    "outbound_dial_status_payload": {
+      "outbound_dial_status_payload_ref01": {
+        "billSec": 120,
+        "dialStatus": "s79",
+        "trafficCost": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /getDialstatus/{uuid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

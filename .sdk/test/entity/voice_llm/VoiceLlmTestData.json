@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "voice_llm": {
+      "VOICE_LLM00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "VOICE_LLM00"
+      },
+      "VOICE_LLM01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "VOICE_LLM01"
+      },
+      "VOICE_LLM02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "VOICE_LLM02"
+      }
+    }
+  },
+  "new": {
+    "voice_llm": {
+      "voice_llm_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/providers/voice-llm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

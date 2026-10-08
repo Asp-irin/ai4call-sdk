@@ -1,0 +1,68 @@
+# BasicAccountPluginInstanceSuccessFlow
+
+main: kit: flow: BasicAccountPluginInstanceSuccessFlow:
+{
+  entity: "account_plugin_instance_success",
+  kind: "basic",
+  name: "BasicAccountPluginInstanceSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "account_plugin_instance_success_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "account_plugin_instance_success_ref01",
+        srcdatavar: "account_plugin_instance_success_ref01_data",
+        suffix: "_up0",
+        textfield: "instanceName"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_plugin_instance_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "account_plugin_instance_success_ref01",
+        srcdatavar: "account_plugin_instance_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-account_plugin_instance_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "account_plugin_instance_success_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "account_plugin_instance_success01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicAccountPluginInstanceSuccessFlow"
+}

@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "assistant_tts_runtime_update_success": {
+      "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS00": {
+        "apiKey": "s6e",
+        "assistantApiKey": "s6f",
+        "assistantId": "s70",
+        "configuration": {},
+        "engineCode": "s72",
+        "providerWalletId": 115,
+        "region": "s74",
+        "runtimeBinding": {},
+        "service": "s76",
+        "sourceMode": "s77",
+        "voiceCode": "s78",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS01": {
+        "apiKey": "sdc",
+        "assistantApiKey": "sdd",
+        "assistantId": "sde",
+        "configuration": {},
+        "engineCode": "se0",
+        "providerWalletId": 225,
+        "region": "se2",
+        "runtimeBinding": {},
+        "service": "se4",
+        "sourceMode": "se5",
+        "voiceCode": "se6",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS02": {
+        "apiKey": "s14a",
+        "assistantApiKey": "s14b",
+        "assistantId": "s14c",
+        "configuration": {},
+        "engineCode": "s14e",
+        "providerWalletId": 335,
+        "region": "s150",
+        "runtimeBinding": {},
+        "service": "s152",
+        "sourceMode": "s153",
+        "voiceCode": "s154",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_TTS_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_tts_runtime_update_success": {
+      "assistant_tts_runtime_update_success_ref01": {
+        "apiKey": "s1b8",
+        "assistantApiKey": "s1b9",
+        "assistantId": "s1ba",
+        "configuration": {},
+        "engineCode": "s1bc",
+        "providerWalletId": 445,
+        "region": "s1be",
+        "runtimeBinding": {},
+        "service": "s1c0",
+        "sourceMode": "s1c1",
+        "voiceCode": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/tts": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "existing": {
+    "account_plugin_configuration_success": {
+      "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS00": {
+        "configuration": {},
+        "instanceName": "s33",
+        "instance_name": "s34",
+        "pluginName": "s35",
+        "plugin_name": "s36",
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS00"
+      },
+      "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS01": {
+        "configuration": {},
+        "instanceName": "s65",
+        "instance_name": "s66",
+        "pluginName": "s67",
+        "plugin_name": "s68",
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS01"
+      },
+      "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS02": {
+        "configuration": {},
+        "instanceName": "s97",
+        "instance_name": "s98",
+        "pluginName": "s99",
+        "plugin_name": "s9a",
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_CONFIGURATION_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_plugin_configuration_success": {
+      "account_plugin_configuration_success_ref01": {
+        "configuration": {},
+        "instanceName": "sc9",
+        "instance_name": "sca",
+        "pluginName": "scb",
+        "plugin_name": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/plugins/configuration": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/account/plugins/instances/{instanceId}/configuration": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/plugins/instances/{instanceId}/configuration": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/plugins/configuration": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

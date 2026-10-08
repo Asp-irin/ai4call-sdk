@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "public_rag_search_success": {
+      "PUBLIC_RAG_SEARCH_SUCCESS00": {
+        "count": 40,
+        "query": "s29",
+        "rag_id": "RAG01",
+        "results": [],
+        "id": "PUBLIC_RAG_SEARCH_SUCCESS00"
+      },
+      "PUBLIC_RAG_SEARCH_SUCCESS01": {
+        "count": 80,
+        "query": "s51",
+        "rag_id": "RAG01",
+        "results": [],
+        "id": "PUBLIC_RAG_SEARCH_SUCCESS01"
+      },
+      "PUBLIC_RAG_SEARCH_SUCCESS02": {
+        "count": 120,
+        "query": "s79",
+        "rag_id": "RAG01",
+        "results": [],
+        "id": "PUBLIC_RAG_SEARCH_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "public_rag_search_success": {
+      "public_rag_search_success_ref01": {
+        "count": 160,
+        "query": "sa1",
+        "rag_id": "RAG01",
+        "results": []
+      }
+    }
+  },
+  "requests": {
+    "POST /public/v1/rag/search": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

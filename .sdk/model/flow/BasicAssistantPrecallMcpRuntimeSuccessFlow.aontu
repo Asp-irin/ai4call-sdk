@@ -1,0 +1,51 @@
+# BasicAssistantPrecallMcpRuntimeSuccessFlow
+
+main: kit: flow: BasicAssistantPrecallMcpRuntimeSuccessFlow:
+{
+  entity: "assistant_precall_mcp_runtime_success",
+  kind: "basic",
+  name: "BasicAssistantPrecallMcpRuntimeSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_precall_mcp_runtime_success_ref01",
+        srcdatavar: "assistant_precall_mcp_runtime_success_ref01_data",
+        suffix: "_up0",
+        textfield: "globalPrompt"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_precall_mcp_runtime_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "assistant_precall_mcp_runtime_success_ref01",
+        srcdatavar: "assistant_precall_mcp_runtime_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_precall_mcp_runtime_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_precall_mcp_runtime_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantPrecallMcpRuntimeSuccessFlow"
+}

@@ -1,0 +1,74 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        email: "support@beevoip.it"
+        name: "AI4Call technical support"
+        url: "https://www.ai4call.com/contatti/"
+      }
+      description: `Public OpenAPI contract for the AI4Call client-facing APIs.
+
+The primary service at \`https://client-api.ai4call.com\` covers authenticated account
+management, assistants and their runtime configuration, provider wallet, catalog resources,
+knowledge, RAG document management, tools and account analytics.
+
+Current Client API authentication flow:
+1. \`POST /api/v1/auth/portal/login\` validates \`email\` and \`portalApiKey\`. It does not
+ issue an access token or create a server-side session.
+2. Business calls accept \`Authorization: Bearer <portalApiKey>\` or the legacy pair
+ \`x-client-email\` and \`x-portal-api-key\`.
+3. Operations on a single assistant use \`assistantId\`; legacy \`assistantApiKey\` path values
+ remain accepted during the v1 compatibility period.
+
+This document also contains operations hosted by dedicated services. Public RAG operations
+use their own Bearer authentication and outbound-call operations use their own API-key header;
+each such operation declares its dedicated server and security scheme.`
+      license: {
+        name: "Proprietary"
+        url: "https://www.ai4call.com"
+      }
+      security: {
+        in: "header"
+        name: "x-client-email"
+        prefix: ""
+        scheme: "ClientEmailHeader"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          description: "Production client API"
+          url: "https://client-api.ai4call.com"
+        }
+      ]
+      summary: "Public OpenAPI contract for the AI4Call client-facing APIs."
+      termsOfService: "https://www.ai4call.com/terms/"
+      title: "AI4Call Client API"
+      version: "1.2.0"
+      website: "https://client-api.ai4call.com"
+      "x-changelog": {
+        "1.1.0": [
+          "Hardened secret-field documentation with write-only provider API keys."
+          "Expanded success examples, standard 500 responses and application error-code documentation."
+          "Improved assistant, provider-wallet, knowledge, analytics, plugin and RAG schema documentation."
+          "Added canonical audio-to-audio routes and payload aliases while preserving voice-to-voice compatibility."
+          "Added canonical tenant paths for knowledge, filler phrase lists and RAG while keeping legacy /catalog aliases deprecated."
+          "Added stable plugin instance identifiers with POST/PATCH/DELETE resource routes, assistant deletion and RAG collection create/delete."
+          "Added opt-in cursor pagination to the main list resources without changing legacy unpaginated responses."
+          "Preserved existing v1.1 authentication mechanisms and compatibility aliases without breaking changes."
+        ]
+        "1.2.0": [
+          "Added public assistant identifiers while retaining legacy assistant API key compatibility."
+          "Added Bearer authentication support for Client API business operations."
+          "Added plugin-configuration routes scoped by stable instanceId."
+          "Clarified assistant deletion safety and webhook payload documentation."
+        ]
+      }
+      "x-documentation-language": "en"
+      "x-documentation-language-label": "English"
+    }
+  }
+}
+

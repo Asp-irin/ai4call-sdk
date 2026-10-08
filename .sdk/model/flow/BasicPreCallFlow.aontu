@@ -1,0 +1,32 @@
+# BasicPreCallFlow
+
+main: kit: flow: BasicPreCallFlow:
+{
+  entity: "pre_call",
+  kind: "basic",
+  name: "BasicPreCallFlow",
+  step: [
+    {
+      i: {
+        ref: "pre_call_ref01",
+        srcdatavar: "pre_call_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "pre_call01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-pre_call_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPreCallFlow"
+}

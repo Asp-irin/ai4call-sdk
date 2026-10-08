@@ -1,0 +1,120 @@
+# Entity: rag_collection_document_token_estimate_success
+
+main: kit: entity: rag_collection_document_token_estimate_success: {
+
+  alias: field: {}
+
+  fields: {
+    estimatedCost: {
+      h: "Estimated Cost"
+      n: "estimatedCost"
+      r: true
+      t: "`$NUMBER`"
+    }
+    fileCount: {
+      h: "File Count"
+      n: "fileCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+    fileDetails: {
+      h: "File Details"
+      n: "fileDetails"
+      r: true
+      t: "`$ARRAY`"
+    }
+    processingTime: {
+      h: "Processing Time"
+      n: "processingTime"
+      r: true
+      t: "`$INTEGER`"
+    }
+    raw: {
+      h: "Raw"
+      n: "raw"
+      r: true
+      t: "`$OBJECT`"
+    }
+    totalTokens: {
+      h: "Total Tokens"
+      n: "totalTokens"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "rag_collection_document_token_estimate_success"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /api/v1/catalog/rag/documents/estimate"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/api/v1/catalog/rag/documents/estimate"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "documents"
+            }
+            {
+              lit: "estimate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "POST /api/v1/rag/documents/estimate"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/api/v1/rag/documents/estimate"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "documents"
+            }
+            {
+              lit: "estimate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

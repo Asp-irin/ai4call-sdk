@@ -1,0 +1,49 @@
+# BasicRagCollectionDeleteSuccessFlow
+
+main: kit: flow: BasicRagCollectionDeleteSuccessFlow:
+{
+  entity: "rag_collection_delete_success",
+  kind: "basic",
+  name: "BasicRagCollectionDeleteSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "rag_collection_delete_success_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "rag_collection_delete_success_ref01",
+        srcdatavar: "rag_collection_delete_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-rag_collection_delete_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "rag_collection_delete_success_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "rag_collection_delete_success01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicRagCollectionDeleteSuccessFlow"
+}

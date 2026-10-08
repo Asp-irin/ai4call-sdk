@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "assistant_number_routing_catalog_success": {
+      "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS00": {
+        "id": "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS00"
+      },
+      "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS01": {
+        "id": "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS01"
+      },
+      "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS02": {
+        "id": "ASSISTANT_NUMBER_ROUTING_CATALOG_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_number_routing_catalog_success": {
+      "assistant_number_routing_catalog_success_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/number-routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+# Entity: runtime_binding
+
+main: kit: entity: runtime_binding: {
+
+  alias: field: {}
+
+  fields: {
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    runtimeBindings: {
+      h: "Runtime Bindings"
+      n: "runtimeBindings"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "runtime_binding"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/catalog/assistants/{assistantId}/runtime-bindings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/catalog/assistants/{assistantId}/runtime-bindings"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime-bindings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

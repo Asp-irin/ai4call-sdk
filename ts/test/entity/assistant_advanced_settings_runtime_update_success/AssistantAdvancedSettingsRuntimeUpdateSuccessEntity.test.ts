@@ -1,0 +1,163 @@
+
+
+import Path from 'node:path'
+import * as Fs from 'node:fs'
+
+import { test, describe, afterEach } from 'node:test'
+import assert from 'node:assert'
+import { createLiveTransport } from '../../live-runner'
+import { runLiveEntity } from '../../live-entity'
+
+
+import { Ai4callSDK, BaseFeature, stdutil } from '../../..'
+
+import {
+  envOverride,
+  liveClientOptions,
+  liveDelay,
+  loadEnvLocal,
+  makeCtrl,
+  makeMatch,
+  makeReqdata,
+  makeStepData,
+  makeValid,
+  maybeSkipControl,
+} from '../../utility'
+
+
+loadEnvLocal(__dirname + '/../../../.env.local')
+
+
+describe('AssistantAdvancedSettingsRuntimeUpdateSuccessEntity', async () => {
+
+  // Per-test live pacing. Delay is read from sdk-test-control.json's
+  // `test.live.delayMs`; only sleeps when AI4CALL_TEST_LIVE=TRUE.
+  afterEach(liveDelay('AI4CALL_TEST_LIVE'))
+
+  test('instance', async () => {
+    const testsdk = Ai4callSDK.test()
+    const ent = testsdk.AssistantAdvancedSettingsRuntimeUpdateSuccess()
+    assert(null != ent)
+  })
+
+
+  test('basic', async (t) => {
+
+    const live = 'TRUE' === process.env.AI4CALL_TEST_LIVE
+    for (const op of ['update']) {
+      if (!live && maybeSkipControl(t, 'entityOp', 'assistant_advanced_settings_runtime_update_success.' + op, live)) return
+    }
+
+    
+    const setup = basicSetup()
+    if (setup.live) {
+      return runLiveEntity(setup, {"active":true,"alias":{"field":{}},"fields":{"assistantApiKey":{"a":true,"h":"Assistant Api Key","n":"assistantApiKey","r":true,"t":"`$STRING`","key$":"assistantApiKey","index$":0},"assistantId":{"a":true,"h":"Assistant Id","n":"assistantId","r":true,"t":"`$STRING`","key$":"assistantId","index$":1},"configuration":{"a":true,"h":"Configuration","n":"configuration","r":true,"t":"`$OBJECT`","key$":"configuration","index$":2},"freqPenalty":{"a":true,"h":"Freq Penalty","n":"freqPenalty","r":false,"sh":"Value supplied for `freqPenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$NUMBER`","key$":"freqPenalty","index$":3},"maxTokens":{"a":true,"h":"Max Tokens","n":"maxTokens","r":false,"sh":"Value supplied for `maxTokens` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$INTEGER`","key$":"maxTokens","index$":4},"presencePenalty":{"a":true,"h":"Presence Penalty","n":"presencePenalty","r":false,"sh":"Value supplied for `presencePenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$NUMBER`","key$":"presencePenalty","index$":5},"service":{"a":true,"h":"Service","n":"service","r":true,"t":"`$STRING`","key$":"service","index$":6},"stopSequences":{"a":true,"h":"Stop Sequences","n":"stopSequences","r":false,"sh":"Value supplied for `stopSequences` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$ARRAY`","key$":"stopSequences","index$":7},"temperature":{"a":true,"h":"Temperature","n":"temperature","r":false,"sh":"Value supplied for `temperature` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$NUMBER`","key$":"temperature","index$":8},"topK":{"a":true,"h":"Top K","n":"topK","r":false,"sh":"Value supplied for `topK` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$INTEGER`","key$":"topK","index$":9},"topP":{"a":true,"h":"Top P","n":"topP","r":false,"sh":"Value supplied for `topP` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","t":"`$NUMBER`","key$":"topP","index$":10}},"name":"assistant_advanced_settings_runtime_update_success","op":{"update":{"input":"data","name":"update","points":[{"a":true,"co":{"id":"PATCH /api/v1/assistants/{assistantId}/runtime/advanced-settings","source":"openapi3","version":2},"g":{"params":[{"a":true,"ex":"205","k":"param","n":"assistant_id","or":"assistantId","r":true,"t":"`$STRING`","index$":0}]},"k":"http","m":"PATCH","o":"/api/v1/assistants/{assistantId}/runtime/advanced-settings","q":{"exist":["assistant_id"]},"r":{"param":{"assistantId":"assistant_id"}},"s":[{"lit":"api"},{"lit":"v1"},{"lit":"assistants"},{"var":"assistant_id"},{"lit":"runtime"},{"lit":"advanced-settings"}],"t":{"req":"`reqdata`","res":"`body.data`"},"index$":0}],"key$":"update"}},"relations":{"ancestors":[["$.main.kit.entity.assistant"]]},"key$":"assistant_advanced_settings_runtime_update_success","name__orig":"assistant_advanced_settings_runtime_update_success","Name":"AssistantAdvancedSettingsRuntimeUpdateSuccess","name_":"assistant_advanced_settings_runtime_update_success","name-":"assistant-advanced-settings-runtime-update-success","NAME":"ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS","index$":20}, {"active":true,"entity":"assistant_advanced_settings_runtime_update_success","key$":"BasicAssistantAdvancedSettingsRuntimeUpdateSuccessFlow","kind":"basic","name":"BasicAssistantAdvancedSettingsRuntimeUpdateSuccessFlow","param":{},"step":[{"a":true,"d":{},"i":{"ref":"assistant_advanced_settings_runtime_update_success_ref01","srcdatavar":"assistant_advanced_settings_runtime_update_success_ref01_data","suffix":"_up0","textfield":"assistantApiKey"},"m":{},"o":"update","s":[{"apply":"TextFieldMark","def":{"mark":"Mark01-assistant_advanced_settings_runtime_update_success_ref01"}}],"v":[],"index$":0}]}, 'AssistantAdvancedSettingsRuntimeUpdateSuccess', {"PATCH /api/v1/assistants/{assistantId}/runtime/advanced-settings":{"protocol":"http","requestBody":{"required":true,"content":{"application/json":{"schema":{"type":"object","description":"PATCH merge of the assistant's advanced settings.\n\nHow to recover current data:\n- use `GET /api/v1/catalog/assistants/{assistantApiKey}/advanced-settings`\n\nOperational rules:\n- send only the fields to be modified\n- numeric fields can be sent to `null` to be removed\n- `stopSequences: null` or `stopSequences: []` resets the list","properties":{"temperature":{"description":"Value supplied for `temperature` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"number","nullable":true,"minimum":0,"maximum":2,"key$":"temperature"},"maxTokens":{"description":"Value supplied for `maxTokens` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"integer","nullable":true,"minimum":1,"maximum":100000,"key$":"maxTokens"},"topP":{"description":"Value supplied for `topP` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"number","nullable":true,"minimum":0,"maximum":1,"key$":"topP"},"topK":{"description":"Value supplied for `topK` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"integer","nullable":true,"minimum":1,"maximum":100,"key$":"topK"},"freqPenalty":{"description":"Value supplied for `freqPenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"number","nullable":true,"minimum":-2,"maximum":2,"key$":"freqPenalty"},"presencePenalty":{"description":"Value supplied for `presencePenalty` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"number","nullable":true,"minimum":-2,"maximum":2,"key$":"presencePenalty"},"stopSequences":{"description":"Value supplied for `stopSequences` in the `AssistantAdvancedSettingsRuntimeUpdateRequest` request.","type":"array","nullable":true,"items":{"type":"string"},"key$":"stopSequences"}},"x-ref":"#/components/schemas/AssistantAdvancedSettingsRuntimeUpdateRequest","index$":1},"examples":{"changeTemperature":{"summary":"It only updates the temperature","value":{"temperature":0.6}},"changeOpenAiParameters":{"summary":"Update penalty and stop sequences","value":{"presencePenalty":0.4,"stopSequences":["END","STOP"]}},"clearField":{"summary":"Removes an advanced parameter","value":{"maxTokens":null}}}}}},"parameters":[{"name":"assistantId","in":"path","required":true,"description":"Public assistant identifier. The current numeric `assistantId` is canonical; the legacy `assistantApiKey` value remains accepted during the v1 compatibility period.","schema":{"type":"string","minLength":1,"maxLength":128,"pattern":"^[A-Za-z0-9_-]+$"},"example":"205","x-ref":"#/components/parameters/AssistantIdentifier","index$":0}]}})
+    }
+    const client = setup.client
+    const struct = setup.struct
+
+    const isempty = struct.isempty
+    const select = struct.select
+
+    let assistant_advanced_settings_runtime_update_success_ref01_data = Object.values(setup.data.existing.assistant_advanced_settings_runtime_update_success)[0] as any
+
+    // UPDATE
+    const assistant_advanced_settings_runtime_update_success_ref01_ent = client.AssistantAdvancedSettingsRuntimeUpdateSuccess()
+    const assistant_advanced_settings_runtime_update_success_ref01_data_up0: any = {}
+
+    const assistant_advanced_settings_runtime_update_success_ref01_markdef_up0 = { name: 'assistantApiKey', value: 'Mark01-assistant_advanced_settings_runtime_update_success_ref01_' + setup.now }
+    ;(assistant_advanced_settings_runtime_update_success_ref01_data_up0 as any)[assistant_advanced_settings_runtime_update_success_ref01_markdef_up0.name] = assistant_advanced_settings_runtime_update_success_ref01_markdef_up0.value
+
+    const assistant_advanced_settings_runtime_update_success_ref01_resdata_up0 = (await assistant_advanced_settings_runtime_update_success_ref01_ent.update(assistant_advanced_settings_runtime_update_success_ref01_data_up0)).data()
+    assert(null != assistant_advanced_settings_runtime_update_success_ref01_resdata_up0)
+
+    assert((assistant_advanced_settings_runtime_update_success_ref01_resdata_up0 as any)[assistant_advanced_settings_runtime_update_success_ref01_markdef_up0.name] === assistant_advanced_settings_runtime_update_success_ref01_markdef_up0.value)
+
+
+  })
+})
+
+
+
+function basicSetup(extra?: any) {
+  // TODO: fix test def options
+  const options: any = {} // null
+
+  // TODO: needs test utility to resolve path
+  const entityDataFile =
+    Path.resolve(__dirname, 
+      '../../../../.sdk/test/entity/assistant_advanced_settings_runtime_update_success/AssistantAdvancedSettingsRuntimeUpdateSuccessTestData.json')
+
+  // TODO: file ready util needed?
+  const entityDataSource = Fs.readFileSync(entityDataFile).toString('utf8')
+
+  // TODO: need a xlang JSON parse utility in voxgig/struct with better error msgs
+  const entityData = JSON.parse(entityDataSource)
+
+  options.entity = entityData.existing
+
+  let client = Ai4callSDK.test(options, extra)
+  const struct = client.utility().struct
+  const merge = struct.merge
+  const transform = struct.transform
+
+  let idmap = transform(
+    ['assistant_advanced_settings_runtime_update_success01','assistant_advanced_settings_runtime_update_success02','assistant_advanced_settings_runtime_update_success03','assistant01','assistant02','assistant03'],
+    {
+      '`$PACK`': ['', {
+        '`$KEY`': '`$COPY`',
+        '`$VAL`': ['`$FORMAT`', 'upper', '`$COPY`']
+      }]
+    })
+
+  const env = envOverride({
+    'AI4CALL_TEST_ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS_ENTID': idmap,
+    'AI4CALL_TEST_LIVE': 'FALSE',
+    'AI4CALL_TEST_EXPLAIN': 'FALSE',
+    'AI4CALL_APIKEY': '',
+  })
+
+  idmap = env['AI4CALL_TEST_ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS_ENTID']
+
+  const live = 'TRUE' === env.AI4CALL_TEST_LIVE
+
+  const transport = createLiveTransport()
+  if (live) {
+    const rawIds = process.env['AI4CALL_TEST_ASSISTANT_ADVANCED_SETTINGS_RUNTIME_UPDATE_SUCCESS_ENTID']
+    idmap = rawIds && rawIds.trim() ? JSON.parse(rawIds) : {}
+    if (!idmap || Array.isArray(idmap) || typeof idmap !== 'object') {
+      throw new Error('Live ENTID must be a JSON object')
+    }
+    client = new Ai4callSDK(merge([
+      // FIRST, so the generated fields below win: sdk-test-control.json's
+      // test.client.options adds to the live client, it does not redirect it.
+      liveClientOptions(),
+      {
+        apikey: env.AI4CALL_APIKEY,
+      },
+      // 'extra || {}', not a bare 'extra': struct.merge returns UNDEFINED when the
+      // last entry is undefined, and basicSetup is normally called with no
+      // argument at all - so a bare 'extra' silently discarded the apikey
+      // and server values above and handed the SDK undefined. Harmless
+      // while there was nothing in that object; not harmless now.
+      extra || {},
+      { system: { fetch: transport.fetch } }
+    ]))
+  }
+
+  const setup = {
+    idmap,
+    env,
+    options,
+    client,
+    struct,
+    data: entityData,
+    explain: 'TRUE' === env.AI4CALL_TEST_EXPLAIN,
+    live,
+    transport,
+    now: Date.now(),
+  }
+
+  return setup
+}
+  

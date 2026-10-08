@@ -1,0 +1,103 @@
+{
+  "existing": {
+    "account_plugin_instance_success": {
+      "ACCOUNT_PLUGIN_INSTANCE_SUCCESS00": {
+        "configuration": {},
+        "data": {},
+        "instanceName": "s84",
+        "instance_name": "s85",
+        "message": "s86",
+        "meta": {},
+        "newInstanceName": "s88",
+        "new_instance_name": "s89",
+        "pluginName": "s8a",
+        "plugin_name": "s8b",
+        "requestId": "s8c",
+        "status": "s8d",
+        "success": true,
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_INSTANCE_SUCCESS00"
+      },
+      "ACCOUNT_PLUGIN_INSTANCE_SUCCESS01": {
+        "configuration": {},
+        "data": {},
+        "instanceName": "s106",
+        "instance_name": "s107",
+        "message": "s108",
+        "meta": {},
+        "newInstanceName": "s10a",
+        "new_instance_name": "s10b",
+        "pluginName": "s10c",
+        "plugin_name": "s10d",
+        "requestId": "s10e",
+        "status": "s10f",
+        "success": true,
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_INSTANCE_SUCCESS01"
+      },
+      "ACCOUNT_PLUGIN_INSTANCE_SUCCESS02": {
+        "configuration": {},
+        "data": {},
+        "instanceName": "s188",
+        "instance_name": "s189",
+        "message": "s18a",
+        "meta": {},
+        "newInstanceName": "s18c",
+        "new_instance_name": "s18d",
+        "pluginName": "s18e",
+        "plugin_name": "s18f",
+        "requestId": "s190",
+        "status": "s191",
+        "success": true,
+        "instance_id": "INSTANCE01",
+        "id": "ACCOUNT_PLUGIN_INSTANCE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_plugin_instance_success": {
+      "account_plugin_instance_success_ref01": {
+        "configuration": {},
+        "data": {},
+        "instanceName": "s20a",
+        "instance_name": "s20b",
+        "message": "s20c",
+        "meta": {},
+        "newInstanceName": "s20e",
+        "new_instance_name": "s20f",
+        "pluginName": "s210",
+        "plugin_name": "s211",
+        "requestId": "s212",
+        "status": "s213",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/account/plugins/instances": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/account/plugins/instances": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/account/plugins/instances/{instanceId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/plugins/instances/{instanceId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/plugins/instances": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

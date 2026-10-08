@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "assistant_save_conversation_runtime_success": {
+      "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS00": {
+        "configuration": {},
+        "emails": "s33",
+        "enabled": true,
+        "smtpInstanceName": "s35",
+        "smtp_instance_name": "s36",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS01": {
+        "configuration": {},
+        "emails": "s65",
+        "enabled": true,
+        "smtpInstanceName": "s67",
+        "smtp_instance_name": "s68",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS02": {
+        "configuration": {},
+        "emails": "s97",
+        "enabled": true,
+        "smtpInstanceName": "s99",
+        "smtp_instance_name": "s9a",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_SAVE_CONVERSATION_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_save_conversation_runtime_success": {
+      "assistant_save_conversation_runtime_success_ref01": {
+        "configuration": {},
+        "emails": "sc9",
+        "enabled": true,
+        "smtpInstanceName": "scb",
+        "smtp_instance_name": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/hangup/save-conversation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/hangup/save-conversation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

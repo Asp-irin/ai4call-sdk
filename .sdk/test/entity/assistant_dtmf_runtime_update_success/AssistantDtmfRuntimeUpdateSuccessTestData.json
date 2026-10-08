@@ -1,0 +1,71 @@
+{
+  "existing": {
+    "assistant_dtmf_runtime_update_success": {
+      "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS00": {
+        "acceptTimeout": 100,
+        "assistantApiKey": "s65",
+        "assistantId": "s66",
+        "configuration": {},
+        "enabled": true,
+        "maxLength": 105,
+        "minLength": 106,
+        "playEnabled": false,
+        "service": "s6c",
+        "terminationChars": "s6d",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS01": {
+        "acceptTimeout": 200,
+        "assistantApiKey": "sc9",
+        "assistantId": "sca",
+        "configuration": {},
+        "enabled": true,
+        "maxLength": 205,
+        "minLength": 206,
+        "playEnabled": false,
+        "service": "sd0",
+        "terminationChars": "sd1",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS02": {
+        "acceptTimeout": 300,
+        "assistantApiKey": "s12d",
+        "assistantId": "s12e",
+        "configuration": {},
+        "enabled": true,
+        "maxLength": 305,
+        "minLength": 306,
+        "playEnabled": false,
+        "service": "s134",
+        "terminationChars": "s135",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_DTMF_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_dtmf_runtime_update_success": {
+      "assistant_dtmf_runtime_update_success_ref01": {
+        "acceptTimeout": 400,
+        "assistantApiKey": "s191",
+        "assistantId": "s192",
+        "configuration": {},
+        "enabled": true,
+        "maxLength": 405,
+        "minLength": 406,
+        "playEnabled": false,
+        "service": "s198",
+        "terminationChars": "s199"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/dtmf": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# BasicAssistantNumberRoutingRuntimeSuccessFlow
+
+main: kit: flow: BasicAssistantNumberRoutingRuntimeSuccessFlow:
+{
+  entity: "assistant_number_routing_runtime_success",
+  kind: "basic",
+  name: "BasicAssistantNumberRoutingRuntimeSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_number_routing_runtime_success_ref01",
+        srcdatavar: "assistant_number_routing_runtime_success_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_number_routing_runtime_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantNumberRoutingRuntimeSuccessFlow"
+}

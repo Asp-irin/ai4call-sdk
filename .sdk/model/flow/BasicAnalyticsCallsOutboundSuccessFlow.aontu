@@ -1,0 +1,28 @@
+# BasicAnalyticsCallsOutboundSuccessFlow
+
+main: kit: flow: BasicAnalyticsCallsOutboundSuccessFlow:
+{
+  entity: "analytics_calls_outbound_success",
+  kind: "basic",
+  name: "BasicAnalyticsCallsOutboundSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "analytics_calls_outbound_success_ref01",
+        srcdatavar: "analytics_calls_outbound_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-analytics_calls_outbound_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAnalyticsCallsOutboundSuccessFlow"
+}

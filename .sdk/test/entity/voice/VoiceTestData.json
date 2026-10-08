@@ -1,0 +1,66 @@
+{
+  "existing": {
+    "voice": {
+      "VOICE00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "VOICE00"
+      },
+      "VOICE01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "VOICE01"
+      },
+      "VOICE02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "VOICE02"
+      }
+    }
+  },
+  "new": {
+    "voice": {
+      "voice_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/audio-to-audio/voices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/assistants/{assistantId}/voice-to-voice/voices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/audio-to-audio/voices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/voice-to-voice/voices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

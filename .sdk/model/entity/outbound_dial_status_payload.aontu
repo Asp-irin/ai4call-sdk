@@ -1,0 +1,80 @@
+# Entity: outbound_dial_status_payload
+
+main: kit: entity: outbound_dial_status_payload: {
+
+  alias: field: {}
+
+  fields: {
+    billSec: {
+      h: "Bill Sec"
+      n: "billSec"
+      r: true
+      sh: "Billed duration in seconds."
+      t: "`$INTEGER`"
+    }
+    dialStatus: {
+      h: "Dial Status"
+      n: "dialStatus"
+      r: true
+      sh: "Final dial result persisted in the outbound CDR."
+      t: "`$STRING`"
+    }
+    trafficCost: {
+      h: "Traffic Cost"
+      n: "trafficCost"
+      r: true
+      sh: "Outbound traffic cost in EUR, expressed with six decimal places."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "outbound_dial_status_payload"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /getDialstatus/{uuid}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "4f9ab147-ef47-4b54-9987-1dd30288c610"
+                k: "param"
+                n: "uuid"
+                or: "uuid"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/getDialstatus/{uuid}"
+          q: {
+            exist: [
+              "uuid"
+            ]
+          }
+          s: [
+            {
+              lit: "getDialstatus"
+            }
+            {
+              var: "uuid"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "audio_to_audio": {
+      "AUDIO_TO_AUDIO00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "AUDIO_TO_AUDIO00"
+      },
+      "AUDIO_TO_AUDIO01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "AUDIO_TO_AUDIO01"
+      },
+      "AUDIO_TO_AUDIO02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "AUDIO_TO_AUDIO02"
+      }
+    }
+  },
+  "new": {
+    "audio_to_audio": {
+      "audio_to_audio_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/providers/audio-to-audio": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

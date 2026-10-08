@@ -1,0 +1,28 @@
+# BasicAnalyticsPreCallSuccessFlow
+
+main: kit: flow: BasicAnalyticsPreCallSuccessFlow:
+{
+  entity: "analytics_pre_call_success",
+  kind: "basic",
+  name: "BasicAnalyticsPreCallSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "analytics_pre_call_success_ref01",
+        srcdatavar: "analytics_pre_call_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-analytics_pre_call_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAnalyticsPreCallSuccessFlow"
+}

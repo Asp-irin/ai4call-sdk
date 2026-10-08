@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "assistant_prompt_success": {
+      "ASSISTANT_PROMPT_SUCCESS00": {
+        "id": "ASSISTANT_PROMPT_SUCCESS00"
+      },
+      "ASSISTANT_PROMPT_SUCCESS01": {
+        "id": "ASSISTANT_PROMPT_SUCCESS01"
+      },
+      "ASSISTANT_PROMPT_SUCCESS02": {
+        "id": "ASSISTANT_PROMPT_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_prompt_success": {
+      "assistant_prompt_success_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/prompt": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

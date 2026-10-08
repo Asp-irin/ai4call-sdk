@@ -1,0 +1,192 @@
+# Entity: rag_collection_document_upload_status_success
+
+main: kit: entity: rag_collection_document_upload_status_success: {
+
+  alias: field: {}
+
+  fields: {
+    currentFile: {
+      h: "Current File"
+      n: "currentFile"
+      r: true
+      t: "`$STRING`"
+    }
+    errors: {
+      h: "Errors"
+      n: "errors"
+      r: true
+      t: "`$ARRAY`"
+    }
+    processedFiles: {
+      h: "Processed Files"
+      n: "processedFiles"
+      r: true
+      t: "`$INTEGER`"
+    }
+    progress: {
+      h: "Progress"
+      n: "progress"
+      r: true
+      t: "`$NUMBER`"
+    }
+    raw: {
+      h: "Raw"
+      n: "raw"
+      r: true
+      t: "`$OBJECT`"
+    }
+    results: {
+      h: "Results"
+      n: "results"
+      r: true
+      t: "`$ARRAY`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    totalCost: {
+      h: "Total Cost"
+      n: "totalCost"
+      r: true
+      t: "`$NUMBER`"
+    }
+    totalFiles: {
+      h: "Total Files"
+      n: "totalFiles"
+      r: true
+      t: "`$INTEGER`"
+    }
+    totalTokens: {
+      h: "Total Tokens"
+      n: "totalTokens"
+      r: true
+      t: "`$INTEGER`"
+    }
+    uploadId: {
+      h: "Upload Id"
+      n: "uploadId"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "rag_collection_document_upload_status_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/catalog/rag/uploads/{uploadId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "upload_id"
+                or: "uploadId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/catalog/rag/uploads/{uploadId}"
+          q: {
+            exist: [
+              "upload_id"
+            ]
+          }
+          r: {
+            param: {
+              uploadId: "upload_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "catalog"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "uploads"
+            }
+            {
+              var: "upload_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/v1/rag/uploads/{uploadId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "upload_id"
+                or: "uploadId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/rag/uploads/{uploadId}"
+          q: {
+            exist: [
+              "upload_id"
+            ]
+          }
+          r: {
+            param: {
+              uploadId: "upload_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "rag"
+            }
+            {
+              lit: "uploads"
+            }
+            {
+              var: "upload_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

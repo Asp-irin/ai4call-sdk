@@ -1,0 +1,76 @@
+{
+  "existing": {
+    "outbound_call": {
+      "OUTBOUND_CALL00": {
+        "AddPrompt": "s78",
+        "addPrompt": "s79",
+        "apiKey_assistente": "s7a",
+        "assistantApiKey": "s7b",
+        "callId": "s7c",
+        "callResultUrl": "s7d",
+        "callbackConfigured": true,
+        "callerId": "s7f",
+        "dst": "s80",
+        "internalId": "s81",
+        "status": "s82",
+        "url_esito_chiamata": "s83",
+        "id": "OUTBOUND_CALL00"
+      },
+      "OUTBOUND_CALL01": {
+        "AddPrompt": "sf0",
+        "addPrompt": "sf1",
+        "apiKey_assistente": "sf2",
+        "assistantApiKey": "sf3",
+        "callId": "sf4",
+        "callResultUrl": "sf5",
+        "callbackConfigured": true,
+        "callerId": "sf7",
+        "dst": "sf8",
+        "internalId": "sf9",
+        "status": "sfa",
+        "url_esito_chiamata": "sfb",
+        "id": "OUTBOUND_CALL01"
+      },
+      "OUTBOUND_CALL02": {
+        "AddPrompt": "s168",
+        "addPrompt": "s169",
+        "apiKey_assistente": "s16a",
+        "assistantApiKey": "s16b",
+        "callId": "s16c",
+        "callResultUrl": "s16d",
+        "callbackConfigured": true,
+        "callerId": "s16f",
+        "dst": "s170",
+        "internalId": "s171",
+        "status": "s172",
+        "url_esito_chiamata": "s173",
+        "id": "OUTBOUND_CALL02"
+      }
+    }
+  },
+  "new": {
+    "outbound_call": {
+      "outbound_call_ref01": {
+        "AddPrompt": "s1e0",
+        "addPrompt": "s1e1",
+        "apiKey_assistente": "s1e2",
+        "assistantApiKey": "s1e3",
+        "callId": "s1e4",
+        "callResultUrl": "s1e5",
+        "callbackConfigured": true,
+        "callerId": "s1e7",
+        "dst": "s1e8",
+        "internalId": "s1e9",
+        "status": "s1ea",
+        "url_esito_chiamata": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "POST /webhook/outbound_call": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "existing": {
+    "knowledge": {
+      "KNOWLEDGE00": {
+        "data": {},
+        "defaultPostAction": "s79",
+        "defaultResponse": "s7a",
+        "id": "KNOWLEDGE00",
+        "knowledge": {},
+        "message": "s7d",
+        "meta": {},
+        "requestId": "s7f",
+        "rules": "s80",
+        "success": false,
+        "title": "s82",
+        "triggers": []
+      },
+      "KNOWLEDGE01": {
+        "data": {},
+        "defaultPostAction": "sf1",
+        "defaultResponse": "sf2",
+        "id": "KNOWLEDGE01",
+        "knowledge": {},
+        "message": "sf5",
+        "meta": {},
+        "requestId": "sf7",
+        "rules": "sf8",
+        "success": false,
+        "title": "sfa",
+        "triggers": []
+      },
+      "KNOWLEDGE02": {
+        "data": {},
+        "defaultPostAction": "s169",
+        "defaultResponse": "s16a",
+        "id": "KNOWLEDGE02",
+        "knowledge": {},
+        "message": "s16d",
+        "meta": {},
+        "requestId": "s16f",
+        "rules": "s170",
+        "success": false,
+        "title": "s172",
+        "triggers": []
+      }
+    }
+  },
+  "new": {
+    "knowledge": {
+      "knowledge_ref01": {
+        "data": {},
+        "defaultPostAction": "s1e1",
+        "defaultResponse": "s1e2",
+        "knowledge": {},
+        "message": "s1e5",
+        "meta": {},
+        "requestId": "s1e7",
+        "rules": "s1e8",
+        "success": false,
+        "title": "s1ea",
+        "triggers": []
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/catalog/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /api/v1/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/knowledge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/catalog/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/catalog/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/catalog/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/knowledge/{knowledgeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

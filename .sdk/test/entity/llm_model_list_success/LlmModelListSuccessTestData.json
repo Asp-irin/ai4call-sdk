@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "llm_model_list_success": {
+      "LLM_MODEL_LIST_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "LLM_MODEL_LIST_SUCCESS00"
+      },
+      "LLM_MODEL_LIST_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "LLM_MODEL_LIST_SUCCESS01"
+      },
+      "LLM_MODEL_LIST_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "assistant_id": "ASSISTANT01",
+        "id": "LLM_MODEL_LIST_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "llm_model_list_success": {
+      "llm_model_list_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/llm/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

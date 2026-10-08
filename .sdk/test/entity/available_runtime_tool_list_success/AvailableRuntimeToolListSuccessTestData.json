@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "available_runtime_tool_list_success": {
+      "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS00"
+      },
+      "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS01"
+      },
+      "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "AVAILABLE_RUNTIME_TOOL_LIST_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "available_runtime_tool_list_success": {
+      "available_runtime_tool_list_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/tools": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

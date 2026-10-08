@@ -1,0 +1,28 @@
+# BasicAnalyticsRagSearchSuccessFlow
+
+main: kit: flow: BasicAnalyticsRagSearchSuccessFlow:
+{
+  entity: "analytics_rag_search_success",
+  kind: "basic",
+  name: "BasicAnalyticsRagSearchSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "analytics_rag_search_success_ref01",
+        srcdatavar: "analytics_rag_search_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-analytics_rag_search_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAnalyticsRagSearchSuccessFlow"
+}

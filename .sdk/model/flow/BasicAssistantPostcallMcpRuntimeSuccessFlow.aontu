@@ -1,0 +1,51 @@
+# BasicAssistantPostcallMcpRuntimeSuccessFlow
+
+main: kit: flow: BasicAssistantPostcallMcpRuntimeSuccessFlow:
+{
+  entity: "assistant_postcall_mcp_runtime_success",
+  kind: "basic",
+  name: "BasicAssistantPostcallMcpRuntimeSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_postcall_mcp_runtime_success_ref01",
+        srcdatavar: "assistant_postcall_mcp_runtime_success_ref01_data",
+        suffix: "_up0",
+        textfield: "globalPrompt"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_postcall_mcp_runtime_success_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "assistant_postcall_mcp_runtime_success_ref01",
+        srcdatavar: "assistant_postcall_mcp_runtime_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_postcall_mcp_runtime_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_postcall_mcp_runtime_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantPostcallMcpRuntimeSuccessFlow"
+}

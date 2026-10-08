@@ -1,0 +1,18 @@
+# BasicPublicRagSearchSuccessFlow
+
+main: kit: flow: BasicPublicRagSearchSuccessFlow:
+{
+  entity: "public_rag_search_success",
+  kind: "basic",
+  name: "BasicPublicRagSearchSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "public_rag_search_success_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicPublicRagSearchSuccessFlow"
+}

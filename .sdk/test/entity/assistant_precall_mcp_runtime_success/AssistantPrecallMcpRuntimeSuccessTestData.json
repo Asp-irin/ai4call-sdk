@@ -1,0 +1,84 @@
+{
+  "existing": {
+    "assistant_precall_mcp_runtime_success": {
+      "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS00": {
+        "configuration": {},
+        "earlyTerminationEnabled": false,
+        "enabled": true,
+        "globalPrompt": "s7b",
+        "modelConfig": {},
+        "outputSchema": {},
+        "outputVariables": [],
+        "terminationMessage": "s7f",
+        "tools": [],
+        "voiceConfig": {},
+        "waitingAudioNonInterruptible": true,
+        "waitingAudioText": "s83",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS01": {
+        "configuration": {},
+        "earlyTerminationEnabled": false,
+        "enabled": true,
+        "globalPrompt": "sf3",
+        "modelConfig": {},
+        "outputSchema": {},
+        "outputVariables": [],
+        "terminationMessage": "sf7",
+        "tools": [],
+        "voiceConfig": {},
+        "waitingAudioNonInterruptible": true,
+        "waitingAudioText": "sfb",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS02": {
+        "configuration": {},
+        "earlyTerminationEnabled": false,
+        "enabled": true,
+        "globalPrompt": "s16b",
+        "modelConfig": {},
+        "outputSchema": {},
+        "outputVariables": [],
+        "terminationMessage": "s16f",
+        "tools": [],
+        "voiceConfig": {},
+        "waitingAudioNonInterruptible": true,
+        "waitingAudioText": "s173",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_PRECALL_MCP_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_precall_mcp_runtime_success": {
+      "assistant_precall_mcp_runtime_success_ref01": {
+        "configuration": {},
+        "earlyTerminationEnabled": false,
+        "enabled": true,
+        "globalPrompt": "s1e3",
+        "modelConfig": {},
+        "outputSchema": {},
+        "outputVariables": [],
+        "terminationMessage": "s1e7",
+        "tools": [],
+        "voiceConfig": {},
+        "waitingAudioNonInterruptible": true,
+        "waitingAudioText": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/precall/mcp-config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/precall/mcp-config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

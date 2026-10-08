@@ -1,0 +1,28 @@
+# BasicAsrFlow
+
+main: kit: flow: BasicAsrFlow:
+{
+  entity: "asr",
+  kind: "basic",
+  name: "BasicAsrFlow",
+  step: [
+    {
+      i: {
+        ref: "asr_ref01",
+        srcdatavar: "asr_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-asr_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAsrFlow"
+}

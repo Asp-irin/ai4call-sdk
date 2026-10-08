@@ -1,0 +1,277 @@
+# Entity: account_plugin_configuration_success
+
+main: kit: entity: account_plugin_configuration_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "Configuration contract and current values for one plugin instance."
+      t: "`$OBJECT`"
+    }
+    instanceName: {
+      h: "Instance Name"
+      n: "instanceName"
+      r: false
+      sh: "Value supplied for `instanceName` in the `AccountPluginConfigurationUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    instance_name: {
+      de: true
+      h: "Instance Name"
+      n: "instance_name"
+      r: false
+      sh: "Legacy alias of `instanceName`."
+      t: "`$STRING`"
+    }
+    pluginName: {
+      h: "Plugin Name"
+      n: "pluginName"
+      r: false
+      sh: "Value supplied for `pluginName` in the `AccountPluginConfigurationUpdateRequest` request."
+      t: "`$STRING`"
+    }
+    plugin_name: {
+      de: true
+      h: "Plugin Name"
+      n: "plugin_name"
+      r: false
+      sh: "Legacy alias of `pluginName`."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "account_plugin_configuration_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/account/plugins/configuration"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "instance_name"
+                or: "instanceName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "instance_name"
+                or: "instance_name"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "plugin_name"
+                or: "pluginName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "plugin_name"
+                or: "plugin_name"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/account/plugins/configuration"
+          q: {
+            exist: [
+              "instance_name"
+              "plugin_name"
+            ]
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "configuration"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /api/v1/account/plugins/instances/{instanceId}/configuration"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "instance_id"
+                or: "instanceId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/account/plugins/instances/{instanceId}/configuration"
+          q: {
+            exist: [
+              "instance_id"
+            ]
+          }
+          r: {
+            param: {
+              instanceId: "instance_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "instance_id"
+            }
+            {
+              lit: "configuration"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/account/plugins/instances/{instanceId}/configuration"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "instance_id"
+                or: "instanceId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/account/plugins/instances/{instanceId}/configuration"
+          q: {
+            exist: [
+              "instance_id"
+            ]
+          }
+          r: {
+            param: {
+              instanceId: "instance_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "instance_id"
+            }
+            {
+              lit: "configuration"
+            }
+          ]
+          t: {
+            req: {
+              configuration: "`reqdata.configuration`"
+            }
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "PATCH /api/v1/account/plugins/configuration"
+            source: "openapi3"
+            version: 2
+          }
+          m: "PATCH"
+          o: "/api/v1/account/plugins/configuration"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "account"
+            }
+            {
+              lit: "plugins"
+            }
+            {
+              lit: "configuration"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

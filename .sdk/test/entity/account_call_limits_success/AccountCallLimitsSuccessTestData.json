@@ -1,0 +1,57 @@
+{
+  "existing": {
+    "account_call_limits_success": {
+      "ACCOUNT_CALL_LIMITS_SUCCESS00": {
+        "assistants": [],
+        "data": {},
+        "message": "s3e",
+        "meta": {},
+        "requestId": "s40",
+        "success": false,
+        "id": "ACCOUNT_CALL_LIMITS_SUCCESS00"
+      },
+      "ACCOUNT_CALL_LIMITS_SUCCESS01": {
+        "assistants": [],
+        "data": {},
+        "message": "s7a",
+        "meta": {},
+        "requestId": "s7c",
+        "success": false,
+        "id": "ACCOUNT_CALL_LIMITS_SUCCESS01"
+      },
+      "ACCOUNT_CALL_LIMITS_SUCCESS02": {
+        "assistants": [],
+        "data": {},
+        "message": "sb6",
+        "meta": {},
+        "requestId": "sb8",
+        "success": false,
+        "id": "ACCOUNT_CALL_LIMITS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "account_call_limits_success": {
+      "account_call_limits_success_ref01": {
+        "assistants": [],
+        "data": {},
+        "message": "sf2",
+        "meta": {},
+        "requestId": "sf4",
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/call-limits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/account/call-limits": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

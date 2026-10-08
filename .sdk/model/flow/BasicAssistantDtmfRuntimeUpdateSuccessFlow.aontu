@@ -1,0 +1,29 @@
+# BasicAssistantDtmfRuntimeUpdateSuccessFlow
+
+main: kit: flow: BasicAssistantDtmfRuntimeUpdateSuccessFlow:
+{
+  entity: "assistant_dtmf_runtime_update_success",
+  kind: "basic",
+  name: "BasicAssistantDtmfRuntimeUpdateSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_dtmf_runtime_update_success_ref01",
+        srcdatavar: "assistant_dtmf_runtime_update_success_ref01_data",
+        suffix: "_up0",
+        textfield: "assistantApiKey"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_dtmf_runtime_update_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantDtmfRuntimeUpdateSuccessFlow"
+}

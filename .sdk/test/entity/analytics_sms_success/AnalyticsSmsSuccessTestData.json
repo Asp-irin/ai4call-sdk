@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "analytics_sms_success": {
+      "ANALYTICS_SMS_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "ANALYTICS_SMS_SUCCESS00"
+      },
+      "ANALYTICS_SMS_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "ANALYTICS_SMS_SUCCESS01"
+      },
+      "ANALYTICS_SMS_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "ANALYTICS_SMS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "analytics_sms_success": {
+      "analytics_sms_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/analytics/sms": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

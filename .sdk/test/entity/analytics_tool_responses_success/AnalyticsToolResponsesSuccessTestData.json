@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "analytics_tool_responses_success": {
+      "ANALYTICS_TOOL_RESPONSES_SUCCESS00": {
+        "data": {},
+        "message": "s33",
+        "meta": {},
+        "requestId": "s35",
+        "success": true,
+        "id": "ANALYTICS_TOOL_RESPONSES_SUCCESS00"
+      },
+      "ANALYTICS_TOOL_RESPONSES_SUCCESS01": {
+        "data": {},
+        "message": "s65",
+        "meta": {},
+        "requestId": "s67",
+        "success": true,
+        "id": "ANALYTICS_TOOL_RESPONSES_SUCCESS01"
+      },
+      "ANALYTICS_TOOL_RESPONSES_SUCCESS02": {
+        "data": {},
+        "message": "s97",
+        "meta": {},
+        "requestId": "s99",
+        "success": true,
+        "id": "ANALYTICS_TOOL_RESPONSES_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "analytics_tool_responses_success": {
+      "analytics_tool_responses_success_ref01": {
+        "data": {},
+        "message": "sc9",
+        "meta": {},
+        "requestId": "scb",
+        "success": true
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/account/analytics/tool-responses": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

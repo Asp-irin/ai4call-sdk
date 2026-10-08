@@ -1,0 +1,778 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 73
+  metrics: count: path: 100
+  metrics: count: method: 141
+
+  entity: account_allowed_ips_success: {
+    path: "/api/v1/account/allowed-ips": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: account_available_plugins_success: {
+    path: "/api/v1/account/plugins/available": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: account_call_limits_success: {
+    path: "/api/v1/account/call-limits": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: account_number_routing_success: {
+    path: "/api/v1/account/number-routing": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: account_plugin_configuration_success: {
+    path: "/api/v1/account/plugins/configuration": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/account/plugins/instances/{instanceId}/configuration": {
+      rename: param: "instanceId": *"instance_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "configuration": *("`reqdata.configuration`")|top
+    }
+  }
+
+  entity: account_plugin_instance_success: {
+    path: "/api/v1/account/plugins/instances": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/account/plugins/instances/{instanceId}": {
+      rename: param: "instanceId": *"instance_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "newInstanceName": *("`reqdata.new_instance_name`")|top
+      op: patch: transform: req: "new_instance_name": *("`reqdata.new_instance_name`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: account_plugin_purchase_success: {
+    path: "/api/v1/account/plugins/purchase": {
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: analytics_calls_outbound_success: {
+    path: "/api/v1/account/analytics/calls-outbound": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_calls_success: {
+    path: "/api/v1/account/analytics/calls": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_post_call_success: {
+    path: "/api/v1/account/analytics/post-call": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_pre_call_success: {
+    path: "/api/v1/account/analytics/pre-call": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_rag_search_success: {
+    path: "/api/v1/account/analytics/rag-searches": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_rag_success: {
+    path: "/api/v1/account/analytics/rag": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_recharges_success: {
+    path: "/api/v1/account/analytics/recharges": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_sms_success: {
+    path: "/api/v1/account/analytics/sms": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: analytics_tool_responses_success: {
+    path: "/api/v1/account/analytics/tool-responses": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: asr: {
+    path: "/api/v1/catalog/providers/asr": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: asr_model_list_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/asr/models": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: assistant: {
+    path: "/api/v1/assistants": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: create: transform: req: "audioToAudio": *("`reqdata.audio_to_audio`")|top
+      op: create: transform: req: "description": *("`reqdata.description`")|top
+      op: create: transform: req: "mode": *("`reqdata.mode`")|top
+      op: create: transform: req: "name": *("`reqdata.name`")|top
+      op: create: transform: req: "voiceToVoice": *("`reqdata.voice_to_voice`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/assistants/{assistantId}": {
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/assistants/{assistantId}/prompt": {
+      action: "prompt": {}
+      rename: param: "assistantId": *"id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_advanced_settings_configuration_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/advanced-settings": {
+      action: "advanced-settings": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_advanced_settings_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/advanced-settings": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_asr_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/asr": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_conversation_webhook_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/hangup/conversation-webhook": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_dtmf_configuration_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/dtmf": {
+      action: "dtmf": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_dtmf_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/dtmf": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_hangup_configuration_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/hangup": {
+      action: "hangup": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_hangup_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/hangup": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_hangup_schema_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/hangup/schema": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "hangupUrl": *("`reqdata.hangup_url`")|top
+      op: patch: transform: req: "schema": *("`reqdata.schema`")|top
+    }
+  }
+
+  entity: assistant_knowledge_success: {
+    path: "/api/v1/assistants/{assistantId}/knowledge": {
+      action: "knowledge": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/api/v1/catalog/assistants/{assistantId}/knowledge": {
+      action: "knowledge": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: assistant_llm_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/llm": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_number_routing_catalog_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/number-routing": {
+      action: "number-routing": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: assistant_number_routing_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/number-routing": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_postcall_mcp_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/postcall/mcp-config": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_precall_mcp_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/precall/mcp-config": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_precall_validation_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/precall/number-validation": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "authPassword": *("`reqdata.auth_password`")|top
+      op: patch: transform: req: "authToken": *("`reqdata.auth_token`")|top
+      op: patch: transform: req: "authType": *("`reqdata.auth_type`")|top
+      op: patch: transform: req: "authUsername": *("`reqdata.auth_username`")|top
+      op: patch: transform: req: "headersJson": *("`reqdata.headers_json`")|top
+      op: patch: transform: req: "isActive": *("`reqdata.is_active`")|top
+      op: patch: transform: req: "method": *("`reqdata.method`")|top
+      op: patch: transform: req: "name": *("`reqdata.name`")|top
+      op: patch: transform: req: "numberLocation": *("`reqdata.number_location`")|top
+      op: patch: transform: req: "numberParamName": *("`reqdata.number_param_name`")|top
+      op: patch: transform: req: "timeoutMs": *("`reqdata.timeout_m`")|top
+      op: patch: transform: req: "url": *("`reqdata.url`")|top
+    }
+  }
+
+  entity: assistant_prompt_success: {
+    path: "/api/v1/assistants/{assistantId}/prompt": {
+      action: "prompt": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_rag_configuration_success: {
+    path: "/api/v1/assistants/{assistantId}/rag/collections": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/catalog/assistants/{assistantId}/rag/collections": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_rag_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/rag": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_save_conversation_runtime_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/hangup/save-conversation": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_settings_configuration_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/settings": {
+      action: "settings": {}
+      rename: param: "assistantId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_settings_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/settings": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_tools_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/tools": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_tts_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/tts": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: assistant_voice_to_voice_runtime_update_success: {
+    path: "/api/v1/assistants/{assistantId}/runtime/audio-to-audio": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "apiKey": *("`reqdata.api_key`")|top
+      op: patch: transform: req: "baseUrl": *("`reqdata.base_url`")|top
+      op: patch: transform: req: "engineCode": *("`reqdata.engine_code`")|top
+      op: patch: transform: req: "modelCode": *("`reqdata.model_code`")|top
+      op: patch: transform: req: "prompt": *("`reqdata.prompt`")|top
+      op: patch: transform: req: "providerWalletId": *("`reqdata.provider_wallet_id`")|top
+      op: patch: transform: req: "voiceCode": *("`reqdata.voice_code`")|top
+    }
+    path: "/api/v1/assistants/{assistantId}/runtime/voice-to-voice": {
+      rename: param: "assistantId": *"assistant_id"
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: patch: transform: req: "apiKey": *("`reqdata.api_key`")|top
+      op: patch: transform: req: "baseUrl": *("`reqdata.base_url`")|top
+      op: patch: transform: req: "engineCode": *("`reqdata.engine_code`")|top
+      op: patch: transform: req: "modelCode": *("`reqdata.model_code`")|top
+      op: patch: transform: req: "prompt": *("`reqdata.prompt`")|top
+      op: patch: transform: req: "providerWalletId": *("`reqdata.provider_wallet_id`")|top
+      op: patch: transform: req: "voiceCode": *("`reqdata.voice_code`")|top
+    }
+  }
+
+  entity: associated_runtime_tool_list_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/tools": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: audio_to_audio: {
+    path: "/api/v1/catalog/providers/audio-to-audio": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: available_runtime_tool_list_success: {
+    path: "/api/v1/catalog/tools": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: filler_phrase_list: {
+    path: "/api/v1/assistants/{assistantId}/filler-phrase-lists": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: update: method: *PUT
+      op: update: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/catalog/assistants/{assistantId}/filler-phrase-lists": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: update: method: *PUT
+      op: update: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/catalog/filler-phrase-lists": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/filler-phrase-lists/{listId}": {
+      rename: param: "listId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+      op: update: method: *PUT
+      op: update: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/filler-phrase-lists": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/filler-phrase-lists/{listId}": {
+      rename: param: "listId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+      op: update: method: *PUT
+      op: update: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: health: {
+    path: "/health": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: knowledge: {
+    path: "/api/v1/catalog/knowledge": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/knowledge/{knowledgeId}": {
+      rename: param: "knowledgeId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/knowledge": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/knowledge/{knowledgeId}": {
+      rename: param: "knowledgeId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: llm: {
+    path: "/api/v1/catalog/providers/llm": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: llm_model_list_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/llm/models": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: outbound_call: {
+    path: "/webhook/outbound_call": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: outbound_call_accepted_success: {
+    path: "/webhook/outbound_call_pbx": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: outbound_dial_status_payload: {
+    path: "/getDialstatus/{uuid}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: portal_login_success: {
+    path: "/api/v1/auth/portal/login": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: pre_call: {
+    path: "/api/v1/catalog/assistants/{assistantId}/pre-call": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: provider_wallet: {
+    path: "/api/v1/account/provider-wallet": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/account/provider-wallet/{providerWalletId}": {
+      rename: param: "providerWalletId": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+      op: patch: method: *PATCH
+      op: patch: transform: res: *("`body.data`")|top
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: provider_wallet_associations_success: {
+    path: "/api/v1/account/provider-wallet/assistants/{assistantId}": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: provider_wallet_catalog_success: {
+    path: "/api/v1/account/provider-wallet/catalog": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: public_rag_search_success: {
+    path: "/public/v1/rag/search": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: rag_collection_delete_success: {
+    path: "/api/v1/catalog/rag/collections": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: create: transform: req: "description": *("`reqdata.description`")|top
+      op: create: transform: req: "maxChunkSize": *("`reqdata.max_chunk_size`")|top
+      op: create: transform: req: "maxChunksPerFile": *("`reqdata.max_chunks_per_file`")|top
+      op: create: transform: req: "name": *("`reqdata.name`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/rag/collections/{ragId}": {
+      rename: param: "ragId": *"rag_id"
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/rag/collections": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: create: transform: req: "description": *("`reqdata.description`")|top
+      op: create: transform: req: "maxChunkSize": *("`reqdata.max_chunk_size`")|top
+      op: create: transform: req: "maxChunksPerFile": *("`reqdata.max_chunks_per_file`")|top
+      op: create: transform: req: "name": *("`reqdata.name`")|top
+      op: load: method: *GET
+    }
+    path: "/api/v1/rag/collections/{ragId}": {
+      rename: param: "ragId": *"rag_id"
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: rag_collection_document_delete_success: {
+    path: "/api/v1/catalog/rag/collections/{ragId}/documents/{fileName}": {
+      rename: param: "fileName": *"file_name"
+      rename: param: "ragId": *"collection_id"
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/rag/collections/{ragId}/documents/{fileName}": {
+      rename: param: "fileName": *"file_name"
+      rename: param: "ragId": *"collection_id"
+      op: remove: method: *DELETE
+      op: remove: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: rag_collection_document_list_success: {
+    path: "/api/v1/catalog/rag/collections/{ragId}/documents": {
+      rename: param: "ragId": *"collection_id"
+      op: load: method: *GET
+    }
+    path: "/api/v1/rag/collections/{ragId}/documents": {
+      rename: param: "ragId": *"collection_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: rag_collection_document_token_estimate_success: {
+    path: "/api/v1/catalog/rag/documents/estimate": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/rag/documents/estimate": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: rag_collection_document_upload_status_success: {
+    path: "/api/v1/catalog/rag/uploads/{uploadId}": {
+      rename: param: "uploadId": *"upload_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/api/v1/rag/uploads/{uploadId}": {
+      rename: param: "uploadId": *"upload_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: rag_collection_document_upload_success: {
+    path: "/api/v1/catalog/rag/collections/{ragId}/documents": {
+      rename: param: "ragId": *"collection_id"
+      op: create: method: *POST
+    }
+    path: "/api/v1/rag/collections/{ragId}/documents": {
+      rename: param: "ragId": *"collection_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: runtime_binding: {
+    path: "/api/v1/catalog/assistants/{assistantId}/runtime-bindings": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: tts: {
+    path: "/api/v1/catalog/providers/tts": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: tts_voice_list_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/tts/voices": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: voice: {
+    path: "/api/v1/catalog/assistants/{assistantId}/audio-to-audio/voices": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/assistants/{assistantId}/voice-to-voice/voices": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/audio-to-audio/voices": {
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/voice-to-voice/voices": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: voice_llm: {
+    path: "/api/v1/catalog/providers/voice-llm": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: voice_llm_model_list_success: {
+    path: "/api/v1/catalog/assistants/{assistantId}/audio-to-audio/models": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/assistants/{assistantId}/voice-to-voice/models": {
+      rename: param: "assistantId": *"assistant_id"
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/audio-to-audio/models": {
+      op: load: method: *GET
+    }
+    path: "/api/v1/catalog/voice-to-voice/models": {
+      op: load: method: *GET
+    }
+  }
+
+}

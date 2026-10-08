@@ -1,0 +1,80 @@
+{
+  "existing": {
+    "rag_collection_document_upload_status_success": {
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS00": {
+        "currentFile": "s6e",
+        "errors": [],
+        "processedFiles": 112,
+        "progress": 113,
+        "raw": {},
+        "results": [],
+        "status": "s74",
+        "totalCost": 117,
+        "totalFiles": 118,
+        "totalTokens": 119,
+        "uploadId": "s78",
+        "upload_id": "UPLOAD01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS00"
+      },
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS01": {
+        "currentFile": "sdc",
+        "errors": [],
+        "processedFiles": 222,
+        "progress": 223,
+        "raw": {},
+        "results": [],
+        "status": "se2",
+        "totalCost": 227,
+        "totalFiles": 228,
+        "totalTokens": 229,
+        "uploadId": "se6",
+        "upload_id": "UPLOAD01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS01"
+      },
+      "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS02": {
+        "currentFile": "s14a",
+        "errors": [],
+        "processedFiles": 332,
+        "progress": 333,
+        "raw": {},
+        "results": [],
+        "status": "s150",
+        "totalCost": 337,
+        "totalFiles": 338,
+        "totalTokens": 339,
+        "uploadId": "s154",
+        "upload_id": "UPLOAD01",
+        "id": "RAG_COLLECTION_DOCUMENT_UPLOAD_STATUS_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "rag_collection_document_upload_status_success": {
+      "rag_collection_document_upload_status_success_ref01": {
+        "currentFile": "s1b8",
+        "errors": [],
+        "processedFiles": 442,
+        "progress": 443,
+        "raw": {},
+        "results": [],
+        "status": "s1be",
+        "totalCost": 447,
+        "totalFiles": 448,
+        "totalTokens": 449,
+        "uploadId": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/rag/uploads/{uploadId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/rag/uploads/{uploadId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "assistant_advanced_settings_configuration_success": {
+      "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS00": {
+        "id": "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS00"
+      },
+      "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS01": {
+        "id": "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS01"
+      },
+      "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS02": {
+        "id": "ASSISTANT_ADVANCED_SETTINGS_CONFIGURATION_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_advanced_settings_configuration_success": {
+      "assistant_advanced_settings_configuration_success_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /api/v1/catalog/assistants/{assistantId}/advanced-settings": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

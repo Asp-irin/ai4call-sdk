@@ -1,0 +1,145 @@
+# Entity: assistant_dtmf_runtime_update_success
+
+main: kit: entity: assistant_dtmf_runtime_update_success: {
+
+  alias: field: {}
+
+  fields: {
+    acceptTimeout: {
+      h: "Accept Timeout"
+      n: "acceptTimeout"
+      r: false
+      sh: "Value supplied for `acceptTimeout` in the `AssistantDtmfRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    assistantApiKey: {
+      h: "Assistant Api Key"
+      n: "assistantApiKey"
+      r: true
+      t: "`$STRING`"
+    }
+    assistantId: {
+      h: "Assistant Id"
+      n: "assistantId"
+      r: true
+      t: "`$STRING`"
+    }
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      t: "`$OBJECT`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      sh: "Enable or disable DTMF reception."
+      t: "`$BOOLEAN`"
+    }
+    maxLength: {
+      h: "Max Length"
+      n: "maxLength"
+      r: false
+      sh: "Value supplied for `maxLength` in the `AssistantDtmfRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    minLength: {
+      h: "Min Length"
+      n: "minLength"
+      r: false
+      sh: "Value supplied for `minLength` in the `AssistantDtmfRuntimeUpdateRequest` request."
+      t: "`$INTEGER`"
+    }
+    playEnabled: {
+      h: "Play Enabled"
+      n: "playEnabled"
+      r: false
+      sh: "Enable or disable DTMF sending during the call."
+      t: "`$BOOLEAN`"
+    }
+    service: {
+      h: "Service"
+      n: "service"
+      r: true
+      t: "`$STRING`"
+    }
+    terminationChars: {
+      h: "Termination Chars"
+      n: "terminationChars"
+      r: false
+      sh: "Value supplied for `terminationChars` in the `AssistantDtmfRuntimeUpdateRequest` request."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_dtmf_runtime_update_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/dtmf"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/dtmf"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "dtmf"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

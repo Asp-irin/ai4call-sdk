@@ -1,0 +1,67 @@
+{
+  "existing": {
+    "assistant_asr_runtime_update_success": {
+      "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS00": {
+        "apiKey": "s5a",
+        "assistantApiKey": "s5b",
+        "assistantId": "s5c",
+        "configuration": {},
+        "engineCode": "s5e",
+        "providerWalletId": 95,
+        "runtimeBinding": {},
+        "service": "s61",
+        "sourceMode": "s62",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS01": {
+        "apiKey": "sb4",
+        "assistantApiKey": "sb5",
+        "assistantId": "sb6",
+        "configuration": {},
+        "engineCode": "sb8",
+        "providerWalletId": 185,
+        "runtimeBinding": {},
+        "service": "sbb",
+        "sourceMode": "sbc",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS02": {
+        "apiKey": "s10e",
+        "assistantApiKey": "s10f",
+        "assistantId": "s110",
+        "configuration": {},
+        "engineCode": "s112",
+        "providerWalletId": 275,
+        "runtimeBinding": {},
+        "service": "s115",
+        "sourceMode": "s116",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_ASR_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_asr_runtime_update_success": {
+      "assistant_asr_runtime_update_success_ref01": {
+        "apiKey": "s168",
+        "assistantApiKey": "s169",
+        "assistantId": "s16a",
+        "configuration": {},
+        "engineCode": "s16c",
+        "providerWalletId": 365,
+        "runtimeBinding": {},
+        "service": "s16f",
+        "sourceMode": "s170"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/asr": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "assistant_llm_runtime_update_success": {
+      "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS00": {
+        "apiKey": "s6e",
+        "assistantApiKey": "s6f",
+        "assistantId": "s70",
+        "baseUrl": "s71",
+        "configuration": {},
+        "engineCode": "s73",
+        "modelCode": "s74",
+        "providerWalletId": 117,
+        "runtimeBinding": {},
+        "service": "s77",
+        "sourceMode": "s78",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS00"
+      },
+      "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS01": {
+        "apiKey": "sdc",
+        "assistantApiKey": "sdd",
+        "assistantId": "sde",
+        "baseUrl": "sdf",
+        "configuration": {},
+        "engineCode": "se1",
+        "modelCode": "se2",
+        "providerWalletId": 227,
+        "runtimeBinding": {},
+        "service": "se5",
+        "sourceMode": "se6",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS01"
+      },
+      "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS02": {
+        "apiKey": "s14a",
+        "assistantApiKey": "s14b",
+        "assistantId": "s14c",
+        "baseUrl": "s14d",
+        "configuration": {},
+        "engineCode": "s14f",
+        "modelCode": "s150",
+        "providerWalletId": 337,
+        "runtimeBinding": {},
+        "service": "s153",
+        "sourceMode": "s154",
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_LLM_RUNTIME_UPDATE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_llm_runtime_update_success": {
+      "assistant_llm_runtime_update_success_ref01": {
+        "apiKey": "s1b8",
+        "assistantApiKey": "s1b9",
+        "assistantId": "s1ba",
+        "baseUrl": "s1bb",
+        "configuration": {},
+        "engineCode": "s1bd",
+        "modelCode": "s1be",
+        "providerWalletId": 447,
+        "runtimeBinding": {},
+        "service": "s1c1",
+        "sourceMode": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /api/v1/assistants/{assistantId}/runtime/llm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

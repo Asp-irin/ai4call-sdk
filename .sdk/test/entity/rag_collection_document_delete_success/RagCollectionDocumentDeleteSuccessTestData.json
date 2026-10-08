@@ -1,0 +1,38 @@
+{
+  "existing": {
+    "rag_collection_document_delete_success": {
+      "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS00": {
+        "collection_id": "COLLECTION01",
+        "file_name": "FILE_NAME01",
+        "id": "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS00"
+      },
+      "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS01": {
+        "collection_id": "COLLECTION01",
+        "file_name": "FILE_NAME01",
+        "id": "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS01"
+      },
+      "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS02": {
+        "collection_id": "COLLECTION01",
+        "file_name": "FILE_NAME01",
+        "id": "RAG_COLLECTION_DOCUMENT_DELETE_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "rag_collection_document_delete_success": {
+      "rag_collection_document_delete_success_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /api/v1/catalog/rag/collections/{ragId}/documents/{fileName}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/rag/collections/{ragId}/documents/{fileName}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

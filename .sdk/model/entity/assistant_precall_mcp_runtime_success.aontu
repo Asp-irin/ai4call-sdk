@@ -1,0 +1,245 @@
+# Entity: assistant_precall_mcp_runtime_success
+
+main: kit: entity: assistant_precall_mcp_runtime_success: {
+
+  alias: field: {}
+
+  fields: {
+    configuration: {
+      h: "Configuration"
+      n: "configuration"
+      r: true
+      sh: "General configuration of the pre-call phase."
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 4
+      }
+    }
+    earlyTerminationEnabled: {
+      h: "Early Termination Enabled"
+      n: "earlyTerminationEnabled"
+      r: false
+      sh: "Enable/disable early termination."
+      t: "`$BOOLEAN`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      sh: "Enable or disable the whole pre-call phase without losing its configuration."
+      t: "`$BOOLEAN`"
+    }
+    globalPrompt: {
+      h: "Global Prompt"
+      n: "globalPrompt"
+      r: false
+      sh: "Global pre-call prompt."
+      t: "`$STRING`"
+    }
+    modelConfig: {
+      h: "Model Config"
+      n: "modelConfig"
+      r: true
+      sh: "Model configuration used by the MCP phase."
+      t: "`$OBJECT`"
+    }
+    outputSchema: {
+      h: "Output Schema"
+      n: "outputSchema"
+      r: false
+      sh: "JSON schema of the expected pre-call output, as an alternative to `outputVariables`."
+      t: "`$OBJECT`"
+    }
+    outputVariables: {
+      h: "Output Variables"
+      n: "outputVariables"
+      r: false
+      sh: "Variables to extract from the pre-call result."
+      t: "`$ARRAY`"
+    }
+    terminationMessage: {
+      h: "Termination Message"
+      n: "terminationMessage"
+      r: false
+      sh: "Early termination audio message."
+      t: "`$STRING`"
+    }
+    tools: {
+      h: "Tools"
+      n: "tools"
+      op: {
+        update: {
+          req: false
+          type: "`$ARRAY`"
+        }
+      }
+      r: true
+      sh: "Complete list of pre-call tools to set (replaces the current ones)."
+      t: "`$ARRAY`"
+    }
+    voiceConfig: {
+      h: "Voice Config"
+      n: "voiceConfig"
+      r: true
+      sh: "Voice/TTS configuration used to generate pre-call hold and termination audio."
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 2
+      }
+    }
+    waitingAudioNonInterruptible: {
+      h: "Waiting Audio Non Interruptible"
+      n: "waitingAudioNonInterruptible"
+      r: false
+      sh: "`true` plays all on-hold audio, `false` allows the customer to speak over the audio."
+      t: "`$BOOLEAN`"
+    }
+    waitingAudioText: {
+      h: "Waiting Audio Text"
+      n: "waitingAudioText"
+      r: false
+      sh: "Audio text on hold."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "assistant_precall_mcp_runtime_success"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /api/v1/assistants/{assistantId}/runtime/precall/mcp-config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/api/v1/assistants/{assistantId}/runtime/precall/mcp-config"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "precall"
+            }
+            {
+              lit: "mcp-config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /api/v1/assistants/{assistantId}/runtime/precall/mcp-config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "205"
+                k: "param"
+                n: "assistant_id"
+                or: "assistantId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/api/v1/assistants/{assistantId}/runtime/precall/mcp-config"
+          q: {
+            exist: [
+              "assistant_id"
+            ]
+          }
+          r: {
+            param: {
+              assistantId: "assistant_id"
+            }
+          }
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "assistants"
+            }
+            {
+              var: "assistant_id"
+            }
+            {
+              lit: "runtime"
+            }
+            {
+              lit: "precall"
+            }
+            {
+              lit: "mcp-config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.assistant")]
+  ]
+
+}

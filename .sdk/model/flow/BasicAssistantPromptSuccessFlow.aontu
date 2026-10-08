@@ -1,0 +1,32 @@
+# BasicAssistantPromptSuccessFlow
+
+main: kit: flow: BasicAssistantPromptSuccessFlow:
+{
+  entity: "assistant_prompt_success",
+  kind: "basic",
+  name: "BasicAssistantPromptSuccessFlow",
+  step: [
+    {
+      i: {
+        ref: "assistant_prompt_success_ref01",
+        srcdatavar: "assistant_prompt_success_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "assistant_prompt_success01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-assistant_prompt_success_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAssistantPromptSuccessFlow"
+}

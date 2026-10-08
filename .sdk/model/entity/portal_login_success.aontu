@@ -1,0 +1,73 @@
+# Entity: portal_login_success
+
+main: kit: entity: portal_login_success: {
+
+  alias: field: {}
+
+  fields: {
+    client: {
+      h: "Client"
+      n: "client"
+      r: true
+      sh: "Customer profile returned after successful portal credential verification."
+      t: "`$OBJECT`"
+    }
+    email: {
+      fo: "email"
+      h: "Email"
+      n: "email"
+      r: true
+      sh: "Portal customer email."
+      t: "`$STRING`"
+    }
+    portalApiKey: {
+      h: "Portal Api Key"
+      n: "portalApiKey"
+      r: true
+      sh: "Static portal API key associated with the customer account."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "portal_login_success"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /api/v1/auth/portal/login"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/api/v1/auth/portal/login"
+          s: [
+            {
+              lit: "api"
+            }
+            {
+              lit: "v1"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "portal"
+            }
+            {
+              lit: "login"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "assistant_hangup_schema_runtime_success": {
+      "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS00": {
+        "configuration": {},
+        "hangupUrl": "s1f",
+        "schema": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS00"
+      },
+      "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS01": {
+        "configuration": {},
+        "hangupUrl": "s3d",
+        "schema": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS01"
+      },
+      "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS02": {
+        "configuration": {},
+        "hangupUrl": "s5b",
+        "schema": [],
+        "assistant_id": "ASSISTANT01",
+        "id": "ASSISTANT_HANGUP_SCHEMA_RUNTIME_SUCCESS02"
+      }
+    }
+  },
+  "new": {
+    "assistant_hangup_schema_runtime_success": {
+      "assistant_hangup_schema_runtime_success_ref01": {
+        "configuration": {},
+        "hangupUrl": "s79",
+        "schema": []
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v1/assistants/{assistantId}/runtime/hangup/schema": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/runtime/hangup/schema": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

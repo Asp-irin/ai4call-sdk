@@ -1,0 +1,121 @@
+{
+  "existing": {
+    "assistant": {
+      "ASSISTANT00": {
+        "assistant": "sb4",
+        "audioToAudio": "sb5",
+        "data": {},
+        "description": "sb7",
+        "firstMessage": {},
+        "id": "ASSISTANT00",
+        "message": "sba",
+        "meta": {},
+        "metadata": {},
+        "mode": "sbd",
+        "name": "sbe",
+        "network": {},
+        "numbers": {},
+        "requestId": "sc1",
+        "settings": {},
+        "status": "sc3",
+        "success": true,
+        "voiceToVoice": {}
+      },
+      "ASSISTANT01": {
+        "assistant": "s168",
+        "audioToAudio": "s169",
+        "data": {},
+        "description": "s16b",
+        "firstMessage": {},
+        "id": "ASSISTANT01",
+        "message": "s16e",
+        "meta": {},
+        "metadata": {},
+        "mode": "s171",
+        "name": "s172",
+        "network": {},
+        "numbers": {},
+        "requestId": "s175",
+        "settings": {},
+        "status": "s177",
+        "success": true,
+        "voiceToVoice": {}
+      },
+      "ASSISTANT02": {
+        "assistant": "s21c",
+        "audioToAudio": "s21d",
+        "data": {},
+        "description": "s21f",
+        "firstMessage": {},
+        "id": "ASSISTANT02",
+        "message": "s222",
+        "meta": {},
+        "metadata": {},
+        "mode": "s225",
+        "name": "s226",
+        "network": {},
+        "numbers": {},
+        "requestId": "s229",
+        "settings": {},
+        "status": "s22b",
+        "success": true,
+        "voiceToVoice": {}
+      }
+    }
+  },
+  "new": {
+    "assistant": {
+      "assistant_ref01": {
+        "assistant": "s2d0",
+        "audioToAudio": "s2d1",
+        "data": {},
+        "description": "s2d3",
+        "firstMessage": {},
+        "message": "s2d6",
+        "meta": {},
+        "metadata": {},
+        "mode": "s2d9",
+        "name": "s2da",
+        "network": {},
+        "numbers": {},
+        "requestId": "s2dd",
+        "settings": {},
+        "status": "s2df",
+        "success": true,
+        "voiceToVoice": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /api/v1/assistants": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/assistants": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /api/v1/assistants/{assistantId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /api/v1/assistants/{assistantId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /api/v1/assistants/{assistantId}/prompt": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

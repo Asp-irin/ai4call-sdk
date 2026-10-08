@@ -1,0 +1,28 @@
+# BasicLlmFlow
+
+main: kit: flow: BasicLlmFlow:
+{
+  entity: "llm",
+  kind: "basic",
+  name: "BasicLlmFlow",
+  step: [
+    {
+      i: {
+        ref: "llm_ref01",
+        srcdatavar: "llm_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-llm_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicLlmFlow"
+}
